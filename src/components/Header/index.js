@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import style from './style.less';
-import styleMain from '../../style/main.less';
+import style from './style.css';
+import styleMain from '../../style/main.css';
 
-const cn = classnames.bind(style);
+const cn = classnames.bind(style, styleMain);
 
 const goTo = (e, path) => {
     e.preventDefault();
@@ -47,28 +47,28 @@ class Header extends React.Component {
         const isMainPage = pathname === `/`;
 
         return <header className={cn(`header`, { isMainPage, expanded: isMenuOpen })}>
-            <div className={style.cont}>
-                <div className={styleMain.cont}>
-                    <div className={style.headerContentWrapper}>
+            <div className={'contHeader'}>
+                <div className={'cont'}>
+                    <div className={'headerContentWrapper'}>
                         <button className={cn(`toggle`, { active: isMenuOpen })} onClick={() => this.toggleMenu(!isMenuOpen)}>
                             <span />
                             <span />
                             <span />
                         </button>
-                        <div className={style.left}>
+                        <div className={'left'}>
                             <menu>
                                 {isMainPage
                                     ? null
-                                    : <li className={style.mainLink}>
+                                    : <li className={'mainLink'}>
                                         <a
-                                            className={cn(styleMain.headerLink, style.notMainPage)}
+                                            className={cn('headerLink', 'notMainPage')}
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
                                         >
                                             {`toMain`}
                                         </a>
                                         <a
-                                            className={cn(styleMain.headerLink, style.notMainPage)}
+                                            className={cn('headerLink', 'notMainPage')}
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
                                         >
@@ -78,7 +78,7 @@ class Header extends React.Component {
                                 {menuItems.map(item => <li>
                                     <a
                                         onClick={(e) => this.goTo(e, item.link)}
-                                        className={cn(styleMain.headerLink, {
+                                        className={cn('headerLink', {
                                             notMainPage: !isMainPage,
                                             isCurrentPage: pathname === item.link
                                         })}
@@ -93,9 +93,9 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className={styleMain.cont}>
+                <div className={'cont'}>
                     {isMainPage
-                        ? <div className={style.headerDescription}>
+                        ? <div className={'headerDescription'}>
                             <h1>{`title`}</h1>
                             <p>Краткое маркетинговое описание</p>
                         </div>

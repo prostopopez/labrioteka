@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './style.less';
-import styleMain from '../../style/main.less';
+import  './style.css';
+import '../../style/main.css';
 
 const goTo = (e, path) => {
     e.preventDefault();
@@ -11,13 +11,13 @@ const goTo = (e, path) => {
 const Footer = (props) => {
     const { menuItems } = props;
 
-    return <footer className={style.footer}>
-        <div className={style.cont}>
-            <div className={style.footerContentWrapper}>
+    return <footer className={'footer'}>
+        <div className={'contFooter'}>
+            <div className={'footerContentWrapper'}>
                 <menu>
                     <li>
                         <a
-                            className={styleMain.footerLink}
+                            className={'footerLink'}
                             href="/"
                             onClick={(e) => goTo(e, `/`)}
                         >
@@ -27,7 +27,7 @@ const Footer = (props) => {
                     {menuItems.map(item => <li>
                         <a
                             onClick={(e) => goTo(e, item.link)}
-                            className={styleMain.footerLink}
+                            className={'footerLink'}
                             href={item.link}
                         >
                             {item.name}
@@ -35,7 +35,7 @@ const Footer = (props) => {
                     </li>)}
                 </menu>
             </div>
-            <div className={style.footerDescription}>
+            <div className={'footerDescription'}>
                 <span>+7 (999) 123-45-67</span>
                 <span>name@email.com</span>
             </div>

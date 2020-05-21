@@ -1,15 +1,6 @@
 import React from 'react';
-import classnames from 'classnames/bind';
-import styleMain from '../../style/main.less';
-import style from './style.less';
-
-const cn = classnames.bind(style);
-
-const goTo = (e, path) => {
-    e.preventDefault();
-
-    window.h.push(path);
-};
+import '../../style/main.css';
+import './style.css';
 
 class MainPage extends React.Component {
     constructor() {
@@ -24,9 +15,9 @@ class MainPage extends React.Component {
     }
 
     render() {
+        return <div className={'mainStyle'}>
+            <div className={'cont'}>
 
-        return <div className={style.mainStyle}>
-            <div className={styleMain.cont}>
             </div>
         </div>;
     }

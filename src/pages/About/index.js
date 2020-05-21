@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './style.css';
-import styleMain from '../../style/main.css';
+import './style.css';
+import '../../style/main.css';
 
 class About extends React.Component {
     constructor(props) {
@@ -24,10 +24,10 @@ class About extends React.Component {
     }
 
     render() {
-        return <div className={style.about}>
-            <div className={styleMain.cont}>
-                <div className={style.content}>
-                    <h2 className={styleMain.titlePage}>{`pageName`}</h2>
+        return <div className={'about'}>
+            <div className={'cont'}>
+                <div className={'content'}>
+                    <h2 className={'titlePage'}>{`pageName`}</h2>
 
                     <p>
                         I On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
@@ -48,12 +48,12 @@ class About extends React.Component {
                         The wise man therefore always holds in these matters to this principle of selection: he rejects
                         pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
                     </p>
-                    <div className={style.feedbackForm}>
-                        <div className={style.text}>
+                    <div className={'feedbackForm'}>
+                        <div className={'text'}>
                             <h2>{`feedbackFormName`}</h2>
                             <p>{`subTitle`}<span>*</span>{`subTitleRight`}</p>
                         </div>
-                        <div className={style.form}>
+                        <div className={'form'}>
                         </div>
                     </div>
                 </div>
