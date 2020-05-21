@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './style.less';
-import styleMain from '../../style/main.less';
+import style from './style.css';
+import styleMain from '../../style/main.css';
 
 class About extends React.Component {
     constructor(props) {
