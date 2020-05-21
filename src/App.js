@@ -1,24 +1,46 @@
 import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './style/main.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const menuItems = [
+  {
+    name: `menuAbout`,
+    link: `/About`
+  }
+];
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      pathname: props.history.location.pathname
+    };
+  }
+
+  componentDidMount() {
+    window.h.listen((e) => {
+      this.setState({
+        pathname: e.pathname
+      });
+    });
+  }
+
+  render() {
+    const { pathname } = this.state;
+
+    return <React.Fragment>
+      <Header
+          menuItems={menuItems}
+          pathname={pathname}
+      />
+      <main>
+        {this.props.children}
+      </main>
+      <Footer menuItems={menuItems} />
+    </React.Fragment>;
+  }
 }
 
 export default App;

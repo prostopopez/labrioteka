@@ -1,0 +1,302 @@
+.noScroll {
+  height: 100vh !important;
+  overflow: hidden;
+}
+.header {
+  background-color: hsl(0, 0%, 17%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.cont {
+  width: 100%;
+}
+.wrapperCont {
+  width: 100%;
+  padding: 0 5%;
+}
+.headerContentWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.toggle {
+  display: none;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  margin-top: 5vw;
+}
+.toggle span {
+  display: block;
+  margin-bottom: 7px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.toggle.active span {
+  background-color: hsl(0, 0%, 7%);
+}
+.toggle.active span:nth-of-type(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+  width: 40px;
+}
+.toggle.active span:nth-of-type(2) {
+  opacity: 0;
+  pointer-events: none;
+}
+.toggle.active span:nth-of-type(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+  width: 40px;
+}
+.left {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+.left .mainLink a:first-of-type {
+  display: none;
+}
+.left .mainLink a:last-of-type {
+  display: flex;
+}
+.left .mainLink svg {
+  fill: white;
+  width: 1.2vw;
+  height: 1.2vw;
+}
+.left .mainLink svg:hover {
+  fill: hsl(0, 100%, 67%);
+}
+.left menu {
+  margin: 3% 0;
+  max-height: 5vw;
+  display: flex;
+  flex: auto;
+  align-items: center;
+  list-style: none;
+}
+.left li {
+  margin-right: 4%;
+}
+.left li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 1400px) {
+  .left li {
+    margin-right: 3.5%;
+  }
+}
+.left a {
+  font-size: 20px;
+}
+@media (max-width: 1400px) {
+  .left a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1400px) {
+  .left {
+    flex: 7;
+  }
+}
+.notMainPage:hover {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.isCurrentPage {
+  color: hsl(0, 100%, 67%);
+}
+.chooseBtn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.chooseBtn button {
+  width: 2.4vw;
+  height: 2.4vw;
+  margin: 0.1vw;
+}
+.isMainPage {
+  background: linear-gradient(rgba(44, 44, 44, 0.81)), url('https://d3rrfy0o57uet0.cloudfront.net/wp-content/uploads/2015/01/Screen-Shot-2015-01-14-at-16.48.44.png') no-repeat;
+  background-size: cover;
+}
+.isMainPage menu {
+  margin: 3% 0;
+}
+.isMainPage li {
+  margin-right: auto;
+}
+.isMainPage li:first-child {
+  margin-left: 0;
+}
+.isMainPage .headerDescription {
+  margin: 15% 0 10% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.isMainPage .headerDescription h1 {
+  font-size: 3.5vw;
+}
+.isMainPage .headerDescription p {
+  margin-top: 1%;
+  font-weight: lighter;
+  font-size: 1.5vw;
+}
+.isMainPage .headerDescription button {
+  margin-top: 10%;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+.isMainPage .left {
+  flex: 4;
+}
+@media (max-width: 1400px) {
+  .isMainPage .left {
+    flex: 7;
+  }
+}
+@media (max-width: 1024px) {
+  .left menu {
+    margin: 4% 0;
+  }
+  .left .mainLink svg {
+    width: 2vw;
+    height: 2vw;
+  }
+  .chooseBtn button {
+    width: 2.3vw;
+    height: 2.3vw;
+  }
+  .isMainPage {
+    padding: 0 4%;
+  }
+  .isMainPage .headerDescription {
+    margin: 40% 0;
+  }
+  .isMainPage .headerDescription h1 {
+    font-size: 6.5vw;
+  }
+  .isMainPage .headerDescription p {
+    margin-top: 3%;
+    font-size: 2vw;
+  }
+  .isMainPage .headerDescription button {
+    margin-top: 8%;
+    padding: 2% 3%;
+    font-size: 2vw;
+  }
+  .isMainPage .left {
+    flex: 6;
+  }
+}
+@media (max-width: 414px) {
+  .header:not(.isMainPage) {
+    background: none;
+  }
+  .left a {
+    font-size: 5vw;
+  }
+  .headerContentWrapper {
+    padding-top: 6%;
+    float: right;
+    flex-direction: column;
+  }
+  .headerContentWrapper .toggle {
+    display: block;
+  }
+  .headerContentWrapper .toggle span {
+    filter: invert(100%);
+  }
+  .left {
+    display: none;
+    width: 100%;
+    order: 2;
+  }
+  .left + .chooseBtn {
+    display: none;
+    width: 100%;
+    flex: auto;
+  }
+  .left + .chooseBtn > div {
+    margin-right: auto;
+  }
+  .left .mainLink a:first-of-type {
+    display: flex;
+  }
+  .left .mainLink a:last-of-type {
+    display: none;
+  }
+  .left menu {
+    flex-direction: column;
+  }
+  .left li {
+    margin-top: 15%;
+  }
+  .left li:first-child {
+    margin-top: 0;
+  }
+  .chooseBtn button {
+    width: 10vw;
+    height: 10vw;
+  }
+  .isMainPage .headerContentWrapper span {
+    filter: none;
+  }
+  .isMainPage .headerDescription {
+    margin: 85vw 0 55vw 0;
+  }
+  .isMainPage .headerDescription h1 {
+    font-size: 12vw;
+    line-height: 100%;
+  }
+  .isMainPage .headerDescription p {
+    font-size: 4vw;
+    margin-top: 12%;
+  }
+  .isMainPage .headerDescription button {
+    font-size: 4vw;
+    margin: 25% 0 0 0;
+    padding: 7% 10%;
+    width: 100%;
+  }
+  .expanded {
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 0 4% 0 10%;
+    background: white;
+  }
+  .expanded .headerContentWrapper {
+    float: none;
+  }
+  .expanded .headerContentWrapper .toggle span {
+    filter: none;
+  }
+  .expanded .left {
+    margin-top: 15%;
+    display: flex;
+  }
+  .expanded .left li {
+    align-self: flex-start;
+  }
+  .expanded .left a:not(.isCurrentPage) {
+    color: hsl(0, 0%, 7%);
+  }
+  .expanded .left a:not(.isCurrentPage):hover,
+  .expanded .left a:not(.isCurrentPage):active {
+    color: hsl(0, 100%, 67%);
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .expanded .chooseBtn {
+    display: flex;
+  }
+  .expanded .headerDescription {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
