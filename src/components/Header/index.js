@@ -66,7 +66,7 @@ class Header extends React.Component {
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
                                         >
-                                            {'toMain'}
+                                            {'На главную'}
                                         </a>
                                         <a
                                             className={cn('headerLink', 'notMainPage')}

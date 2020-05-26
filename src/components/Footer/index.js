@@ -21,7 +21,7 @@ const Footer = (props) => {
                             href="/"
                             onClick={(e) => goTo(e, `/`)}
                         >
-                            {`toMain`}
+                            {`На главную`}
                         </a>
                     </li>
                     {menuItems.map(item => <li>

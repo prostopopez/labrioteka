@@ -5,27 +5,27 @@ import './style/main.css';
 
 const menuItems = [
   {
-    name: `menuCatalog`,
+    name: `Каталог`,
     link: `/catalog`
   },
   {
-    name: `menuAuthors`,
+    name: `Авторы`,
     link: `/catalog/authors`
   },
   {
-    name: `menuGenres`,
+    name: `Жанры`,
     link: `/catalog/genres`
   },
   {
-    name: `menuCollections`,
+    name: `Коллекции`,
     link: `/catalog/collections`
   },
   {
-    name: `menuDelivery`,
+    name: `Доставка`,
     link: `/delivery`
   },
   {
-    name: `menuContacts`,
+    name: `Контакты`,
     link: `/contacts`
   },
 ];
