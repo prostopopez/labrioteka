@@ -5,9 +5,29 @@ import './style/main.css';
 
 const menuItems = [
   {
-    name: `menuAbout`,
-    link: `/About`
-  }
+    name: `menuCatalog`,
+    link: `/catalog`
+  },
+  {
+    name: `menuAuthors`,
+    link: `/catalog/authors`
+  },
+  {
+    name: `menuGenres`,
+    link: `/catalog/genres`
+  },
+  {
+    name: `menuCollections`,
+    link: `/catalog/collections`
+  },
+  {
+    name: `menuDelivery`,
+    link: `/delivery`
+  },
+  {
+    name: `menuContacts`,
+    link: `/contacts`
+  },
 ];
 
 class App extends React.Component {

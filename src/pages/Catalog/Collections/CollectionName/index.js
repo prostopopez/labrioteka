@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
-import '../../style/main.css';
+import '../../../../style/main.css';
 
-class About extends React.Component {
+class CollectionName extends React.Component {
     constructor(props) {
         super(props);
 
@@ -62,4 +62,4 @@ class About extends React.Component {
     }
 }
 
-export default About;
+export default CollectionName;
