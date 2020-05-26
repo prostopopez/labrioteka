@@ -130,6 +130,7 @@ a {
   text-decoration: none;
 }
 .headerLink {
+  cursor: pointer;
   border-bottom: none;
 }
 .headerLink.active,
@@ -151,10 +152,12 @@ a {
   flex-direction: column;
 }
 .watchLink {
+  cursor: pointer;
   color: hsl(0, 0%, 85%);
   border-bottom: none;
 }
 .footerLink {
+  cursor: pointer;
   border-bottom: none;
 }
 .footerLink:hover {
@@ -193,6 +196,7 @@ a {
   }
 }
 .linkViewAll {
+  cursor: pointer;
   font-size: 36px;
   color: hsl(0, 0%, 85%);
   font-weight: 500;

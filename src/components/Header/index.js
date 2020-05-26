@@ -1,5 +1,9 @@
 import React from 'react';
 import classnames from 'classnames/bind';
+import counterpart from 'counterpart';
+import Translate from 'react-translate-component';
+import en from './lang/en';
+import ru from './lang/ru';
 import style from './style.css';
 import styleMain from '../../style/main.css';
 
@@ -11,12 +15,17 @@ const goTo = (e, path) => {
     window.h.push(path);
 };
 
+counterpart.registerTranslations('en', en);
+counterpart.registerTranslations('ru', ru);
+counterpart.setLocale('en');
+
 class Header extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            isMenuOpen: false
+            isMenuOpen: false,
+            lang: 'en'
         };
     }
 
@@ -41,6 +50,11 @@ class Header extends React.Component {
         document.body.classList.remove(style.noScroll);
     };
 
+    onLangChange = (e) => {
+        this.setState({lang: e.target.value});
+        counterpart.setLocale(e.target.value);
+    }
+
     render() {
         const { menuItems, pathname } = this.props;
         const { isMenuOpen } = this.state;
@@ -60,13 +74,12 @@ class Header extends React.Component {
                                 {isMainPage
                                     ? null
                                     : <li className={'mainLink'}>
-                                        <a
+                                        <Translate
+                                            content='link'
                                             className={cn('headerLink', 'notMainPage')}
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
-                                        >
-                                            {`toMain`}
-                                        </a>
+                                        />
                                         <a
                                             className={cn('headerLink', 'notMainPage')}
                                             href="/"
@@ -90,6 +103,10 @@ class Header extends React.Component {
                             </menu>
                         </div>
                         <div className={cn(`chooseBtn`, { active: isMainPage })}>
+                            <select value={this.state.lang} onChange={this.onLangChange}>
+                                <option value="en">EN</option>
+                                <option value="ru">RU</option>
+                            </select>
                         </div>
                     </div>
                 </div>
