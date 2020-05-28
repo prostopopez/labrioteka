@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/bookIcon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/font.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/font.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +84,8 @@
       <workItem from="1590403032781" duration="1483000" />
       <workItem from="1590418761022" duration="276000" />
       <workItem from="1590425886306" duration="75000" />
-      <workItem from="1590492319059" duration="10914000" />
+      <workItem from="1590492319059" duration="11857000" />
+      <workItem from="1590653146781" duration="10184000" />
     </task>
     <servers />
   </component>

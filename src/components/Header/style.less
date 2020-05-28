@@ -8,7 +8,8 @@
 .header {
     display: flex;
     flex-direction: column;
-    color: white;
+    background-color: @header-back-color;
+    color: @header-text-color;
 }
 
 .contHeader {
@@ -129,7 +130,7 @@
 }
 
 .isCurrentPage {
-    color: @mainActiveColor;
+    color: @main-active-color;
 }
 
 .chooseBtn {
@@ -369,7 +370,7 @@
 
                 &:hover,
                 &:active {
-                    color: @mainActiveColor;
+                    color: @main-active-color;
                     padding-bottom: 0;
                     border-bottom: 0;
                 }

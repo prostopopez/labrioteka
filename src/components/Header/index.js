@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
+import { ReactSVG } from 'react-svg'
 import style from './style.css';
 import styleMain from '../../style/main.css';
 
@@ -66,13 +67,20 @@ class Header extends React.Component {
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
                                         >
-                                            {'На главную'}
-                                        </a>
-                                        <a
-                                            className={cn('headerLink', 'notMainPage')}
-                                            href="/"
-                                            onClick={(e) => this.goTo(e, `/`)}
-                                        >
+                                            <ReactSVG
+                                                src="../bookIcon.svg"
+                                                beforeInjection={(svg) => {
+                                                    // Add a class name to the SVG element. Note: You'll need a classList
+                                                    svg.classList.add('svg-class-name')
+
+                                                    // Add inline style to the SVG element.
+                                                    svg.setAttribute('style', 'width: 2vw; height: 2vw')
+
+                                                    // Modify the first `g` element within the SVG.
+                                                    const [firstGElement] = [...svg.querySelectorAll('g')]
+                                                    firstGElement.setAttribute('fill', 'wheat')
+                                                }}
+                                            />
                                         </a>
                                     </li>
                                 }

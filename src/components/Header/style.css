@@ -3,9 +3,9 @@
   overflow: hidden;
 }
 .header {
-  background-color: hsl(0, 0%, 17%);
   display: flex;
   flex-direction: column;
+  background-color: hsl(0, 0%, 17%);
   color: white;
 }
 .contHeader {
@@ -67,7 +67,7 @@
   height: 1.2vw;
 }
 .left .mainLink svg:hover {
-  fill: hsl(0, 100%, 67%);
+  fill: hsl(103, 100%, 81%);
 }
 .left menu {
   margin: 3% 0;
@@ -106,7 +106,7 @@
   border-bottom: 0;
 }
 .isCurrentPage {
-  color: hsl(0, 100%, 67%);
+  color: hsl(103, 100%, 81%);
 }
 .chooseBtn {
   flex: 1;
@@ -288,7 +288,7 @@
   }
   .expanded .left a:not(.isCurrentPage):hover,
   .expanded .left a:not(.isCurrentPage):active {
-    color: hsl(0, 100%, 67%);
+    color: hsl(103, 100%, 81%);
     padding-bottom: 0;
     border-bottom: 0;
   }
