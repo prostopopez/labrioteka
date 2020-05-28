@@ -64,127 +64,59 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
-button {
-  outline: none;
+menu,
+ul {
+  list-style: none;
 }
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
   color: hsl(0, 0%, 13%);
-  background-color: hsl(139, 100%, 97%);
+  background-color: hsla(27, 100%, 98%, 0.54);
 }
-.cont {
+.mainWrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
 @media (max-width: 1400px) {
-  .cont {
+  .mainWrapper {
     width: 1024px;
   }
 }
 @media (max-width: 1024px) {
-  .cont {
+  .mainWrapper {
     width: 785px;
   }
 }
 @media (max-width: 768px) {
-  .cont {
+  .mainWrapper {
     width: 97%;
   }
 }
 @media (max-width: 414px) {
-  .cont {
+  .mainWrapper {
     width: 87%;
   }
 }
-a {
-  color: hsl(0, 0%, 100%);
+a,
+.userIcon,
+.mainIcon,
+.basketIcon {
+  color: white;
+  fill: white;
   text-decoration: none;
 }
-.headerLink {
+.headfootLink {
   cursor: pointer;
   border-bottom: none;
 }
-.headerLink.active,
-.headerLink:hover {
-  color: hsl(103, 100%, 81%);
+.headfootLink.active,
+.headfootLink:hover {
+  color: #ffe8ba;
 }
-.headerLink:hover {
-  padding-bottom: 4px;
-  border-bottom: 2px solid hsl(103, 100%, 81%);
-}
-@media (max-width: 1366px) {
-  .headerLink:hover {
-    padding-bottom: 13px;
-  }
-}
-.title {
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-}
-.watchLink {
-  cursor: pointer;
-  color: hsl(0, 0%, 85%);
-  border-bottom: none;
-}
-.footerLink {
-  cursor: pointer;
-  border-bottom: none;
-}
-.footerLink:hover {
-  color: hsl(103, 100%, 81%);
-}
-.titlePage {
-  font-size: 36px;
-  color: hsl(0, 0%, 17%);
-  margin-bottom: 50px;
-  font-weight: bold;
-}
-@media (max-width: 1400px) {
-  .titlePage {
-    font-size: 32px;
-  }
-}
-@media (max-width: 768px) {
-  .titlePage {
-    font-size: 25px;
-  }
-}
-.titleContent {
-  font-size: 36px;
-  color: hsl(0, 0%, 17%);
-  margin-bottom: 50px;
-  font-weight: 500;
-}
-@media (max-width: 1400px) {
-  .titleContent {
-    font-size: 32px;
-  }
-}
-@media (max-width: 768px) {
-  .titleContent {
-    font-size: 25px;
-  }
-}
-.linkViewAll {
-  cursor: pointer;
-  font-size: 36px;
-  color: hsl(0, 0%, 85%);
-  font-weight: 500;
-}
-@media (max-width: 1400px) {
-  .linkViewAll {
-    font-size: 32px;
-  }
-}
-@media (max-width: 768px) {
-  .linkViewAll {
-    font-size: 25px;
-  }
-}
-@media (max-width: 768px) {
-  flex-direction: column;
+.headfootLink:hover .userIcon,
+.headfootLink:hover .basketIcon {
+  fill: #ffe8ba;
 }
 /*# sourceMappingURL=main.css.map */

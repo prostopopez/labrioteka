@@ -16,7 +16,7 @@ class DeliveryPage extends React.Component {
 
     render() {
         return <div className={'mainStyle'}>
-            <div className={'cont'}>
+            <div className={'mainWrapper'}>
 
             </div>
         </div>;

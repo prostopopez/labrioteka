@@ -25,7 +25,7 @@ class CollectionName extends React.Component {
 
     render() {
         return <div className={'about'}>
-            <div className={'cont'}>
+            <div className={'mainWrapper'}>
                 <div className={'content'}>
                     <h2 className={'titlePage'}>{`pageName`}</h2>
 

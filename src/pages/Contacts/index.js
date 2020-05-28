@@ -5,7 +5,7 @@ import './style.css';
 const ContactPage = () => {
     return (
         <div className={'contacts'}>
-            <div className={'cont'}>
+            <div className={'mainWrapper'}>
                 <h1 className={'titlePage'}>{``}</h1>
             </div>
             <div className={'contactsFlex'}>

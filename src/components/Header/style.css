@@ -3,26 +3,20 @@
   overflow: hidden;
 }
 .header {
-  display: flex;
-  flex-direction: column;
-  background-color: hsl(0, 0%, 17%);
+  background-color: hsl(240, 33%, 17%);
   color: white;
 }
-.contHeader {
+.headerWrapper {
   width: 100%;
-}
-.wrapperCont {
-  width: 100%;
-  padding: 0 5%;
 }
 .headerContentWrapper {
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 .toggle {
-  display: none;
   align-self: flex-end;
+  display: none;
   background: none;
   border: none;
   margin-top: 5vw;
@@ -51,9 +45,7 @@
   width: 40px;
 }
 .left {
-  flex: 5;
-  display: flex;
-  justify-content: center;
+  width: 90%;
 }
 .left .mainLink a:first-of-type {
   display: none;
@@ -61,21 +53,19 @@
 .left .mainLink a:last-of-type {
   display: flex;
 }
-.left .mainLink svg {
+.left .mainIcon {
   fill: white;
-  width: 1.2vw;
-  height: 1.2vw;
+  width: 2vw;
+  height: 2vw;
 }
-.left .mainLink svg:hover {
-  fill: hsl(103, 100%, 81%);
+.left .mainIcon:hover {
+  fill: #ffe8ba;
 }
 .left menu {
-  margin: 3% 0;
-  max-height: 5vw;
+  width: 100%;
   display: flex;
   flex: auto;
   align-items: center;
-  list-style: none;
 }
 .left li {
   margin-right: 4%;
@@ -96,28 +86,26 @@
     font-size: 16px;
   }
 }
-@media (max-width: 1400px) {
-  .left {
-    flex: 7;
-  }
-}
 .notMainPage:hover {
   padding-bottom: 0;
   border-bottom: 0;
 }
 .isCurrentPage {
-  color: hsl(103, 100%, 81%);
+  color: #ffe8ba;
 }
-.chooseBtn {
-  flex: 1;
+.isCurrentPage svg {
+  fill: #ffe8ba;
+}
+.userToggle {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
-.chooseBtn button {
-  width: 2.4vw;
-  height: 2.4vw;
-  margin: 0.1vw;
+.userToggle a:first-of-type {
+  margin-right: 100%;
+}
+.userToggle .userIcon,
+.userToggle .basketIcon {
+  width: 1.7vw;
+  height: 1.7vw;
 }
 .isMainPage {
   background: linear-gradient(rgba(44, 44, 44, 0.81)), url('https://d3rrfy0o57uet0.cloudfront.net/wp-content/uploads/2015/01/Screen-Shot-2015-01-14-at-16.48.44.png') no-repeat;
@@ -127,13 +115,12 @@
   margin: 3% 0;
 }
 .isMainPage li {
-  margin-right: auto;
+  margin-left: auto;
 }
 .isMainPage li:first-child {
   margin-left: 0;
 }
 .isMainPage .headerDescription {
-  margin: 15% 0 10% 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -151,25 +138,15 @@
   font-size: 1.2vw;
   font-weight: 500;
 }
-.isMainPage .left {
-  flex: 4;
-}
-@media (max-width: 1400px) {
-  .isMainPage .left {
-    flex: 7;
-  }
-}
 @media (max-width: 1024px) {
+  .left {
+    width: 85%;
+  }
   .left menu {
     margin: 4% 0;
   }
-  .left .mainLink svg {
-    width: 2vw;
-    height: 2vw;
-  }
-  .chooseBtn button {
-    width: 2.3vw;
-    height: 2.3vw;
+  .left a {
+    font-size: 1.5vw;
   }
   .isMainPage {
     padding: 0 4%;
@@ -189,8 +166,15 @@
     padding: 2% 3%;
     font-size: 2vw;
   }
-  .isMainPage .left {
-    flex: 6;
+}
+@media (max-width: 768px) {
+  .left {
+    width: 90%;
+    margin: 0;
+    align-items: flex-start;
+  }
+  menu {
+    padding: 0;
   }
 }
 @media (max-width: 414px) {
@@ -216,12 +200,12 @@
     width: 100%;
     order: 2;
   }
-  .left + .chooseBtn {
+  .left + .userToggle {
     display: none;
     width: 100%;
     flex: auto;
   }
-  .left + .chooseBtn > div {
+  .left + .userToggle > div {
     margin-right: auto;
   }
   .left .mainLink a:first-of-type {
@@ -234,12 +218,14 @@
     flex-direction: column;
   }
   .left li {
+    margin-left: 0;
     margin-top: 15%;
   }
   .left li:first-child {
     margin-top: 0;
   }
-  .chooseBtn button {
+  .userToggle .userIcon,
+  .userToggle .basketIcon {
     width: 10vw;
     height: 10vw;
   }
@@ -288,11 +274,11 @@
   }
   .expanded .left a:not(.isCurrentPage):hover,
   .expanded .left a:not(.isCurrentPage):active {
-    color: hsl(103, 100%, 81%);
+    color: #ffe8ba;
     padding-bottom: 0;
     border-bottom: 0;
   }
-  .expanded .chooseBtn {
+  .expanded .userToggle {
     display: flex;
   }
   .expanded .headerDescription {

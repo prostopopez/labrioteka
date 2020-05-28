@@ -1,4 +1,5 @@
 import React from 'react';
+import {ReactSVG} from "react-svg";
 import  './style.css';
 import '../../style/main.css';
 
@@ -12,32 +13,37 @@ const Footer = (props) => {
     const { menuItems } = props;
 
     return <footer className={'footer'}>
-        <div className={'contFooter'}>
-            <div className={'footerContentWrapper'}>
-                <menu>
-                    <li>
-                        <a
-                            className={'footerLink'}
-                            href="/"
-                            onClick={(e) => goTo(e, `/`)}
-                        >
-                            {`На главную`}
-                        </a>
-                    </li>
-                    {menuItems.map(item => <li>
-                        <a
-                            onClick={(e) => goTo(e, item.link)}
-                            className={'footerLink'}
-                            href={item.link}
-                        >
-                            {item.name}
-                        </a>
-                    </li>)}
-                </menu>
-            </div>
+        <div className={'footerWrapper'}>
+            <menu>
+                <li>
+                    <a
+                        className={'footerLink'}
+                        href="/"
+                        onClick={(e) => goTo(e, `/`)}
+                    >
+                        {`Главная`}
+                    </a>
+                </li>
+                {menuItems.map(item => <li>
+                    <a
+                        onClick={(e) => goTo(e, item.link)}
+                        className={'headfootLink'}
+                        href={item.link}
+                    >
+                        {item.name}
+                    </a>
+                </li>)}
+            </menu>
             <div className={'footerDescription'}>
-                <span>+7 (999) 123-45-67</span>
-                <span>name@email.com</span>
+                <ReactSVG
+                    src="../img/bookIcon.svg"
+                    beforeInjection={(svg) => {
+                        svg.classList.add('mainIcon')
+                        svg.setAttribute('style', 'width: 2vw; height: 2vw')
+                    }}
+                />
+                <span>&copy; 2020 Labrioteka</span>
+                <span>prostopopez</span>
             </div>
         </div>
     </footer>;

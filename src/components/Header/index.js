@@ -17,8 +17,7 @@ class Header extends React.Component {
         super();
 
         this.state = {
-            isMenuOpen: false,
-            lang: 'en'
+            isMenuOpen: false
         };
     }
 
@@ -49,8 +48,17 @@ class Header extends React.Component {
         const isMainPage = pathname === `/`;
 
         return <header className={cn(`header`, { isMainPage, expanded: isMenuOpen })}>
-            <div className={'contHeader'}>
-                <div className={'cont'}>
+            <div className={'headerWrapper'}>
+                <div className={'mainWrapper'}>
+                    {isMainPage
+                        ? <div className={'headerDescription'}>
+                            <h1>{`Labrioteka`}</h1>
+                            <p>Книжный портал с персональными рекомендациями и личными коллекциями</p>
+                        </div>
+                        : null
+                    }
+                </div>
+                <div className={'mainWrapper'}>
                     <div className={'headerContentWrapper'}>
                         <button className={cn(`toggle`, { active: isMenuOpen })} onClick={() => this.toggleMenu(!isMenuOpen)}>
                             <span />
@@ -63,22 +71,14 @@ class Header extends React.Component {
                                     ? null
                                     : <li className={'mainLink'}>
                                         <a
-                                            className={cn('headerLink', 'notMainPage')}
+                                            className={cn('headfootLink', 'notMainPage')}
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
                                         >
                                             <ReactSVG
-                                                src="../bookIcon.svg"
+                                                src="../img/bookIcon.svg"
                                                 beforeInjection={(svg) => {
-                                                    // Add a class name to the SVG element. Note: You'll need a classList
-                                                    svg.classList.add('svg-class-name')
-
-                                                    // Add inline style to the SVG element.
-                                                    svg.setAttribute('style', 'width: 2vw; height: 2vw')
-
-                                                    // Modify the first `g` element within the SVG.
-                                                    const [firstGElement] = [...svg.querySelectorAll('g')]
-                                                    firstGElement.setAttribute('fill', 'wheat')
+                                                    svg.classList.add('mainIcon')
                                                 }}
                                             />
                                         </a>
@@ -87,7 +87,7 @@ class Header extends React.Component {
                                 {menuItems.map(item => <li>
                                     <a
                                         onClick={(e) => this.goTo(e, item.link)}
-                                        className={cn('headerLink', {
+                                        className={cn('headfootLink', {
                                             notMainPage: !isMainPage,
                                             isCurrentPage: pathname === item.link
                                         })}
@@ -98,18 +98,37 @@ class Header extends React.Component {
                                 </li>)}
                             </menu>
                         </div>
-                        <div className={cn(`chooseBtn`, { active: isMainPage })}>
+                        <div className={cn(`userToggle`, { active: isMainPage })}>
+                            <a
+                                onClick={(e) => this.goTo(e, `/profile/basket`)}
+                                className={cn('headfootLink', {
+                                    isCurrentPage: pathname === '/profile/basket'
+                                })}
+                                href="/profile/basket"
+                            >
+                                <ReactSVG
+                                    src="../img/basketIcon.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('basketIcon')
+                                    }}
+                                />
+                            </a>
+                            <a
+                                onClick={(e) => this.goTo(e, `/profile`)}
+                                className={cn('headfootLink', {
+                                    isCurrentPage: pathname === '/profile'
+                                })}
+                                href="/profile"
+                            >
+                                <ReactSVG
+                                    src="../img/userIcon.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('userIcon')
+                                    }}
+                                />
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div className={'cont'}>
-                    {isMainPage
-                        ? <div className={'headerDescription'}>
-                            <h1>{`title`}</h1>
-                            <p>Краткое маркетинговое описание</p>
-                        </div>
-                        : null
-                    }
                 </div>
             </div>
         </header>;
