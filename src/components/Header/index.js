@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
+import enhanceWithClickOutside from 'react-click-outside';
 import { ReactSVG } from 'react-svg'
 import style from './style.css';
 import styleMain from '../../style/main.css';
@@ -17,7 +18,8 @@ class Header extends React.Component {
         super();
 
         this.state = {
-            isMenuOpen: false
+            isMenuOpen: false,
+            isSubmenuOpen: false
         };
     }
 
@@ -27,11 +29,21 @@ class Header extends React.Component {
         });
 
         if (isMenuOpen === true) {
-            document.body.classList.add(style.noScroll);
+            document.body.classList.add('noScroll');
         } else {
-            document.body.classList.remove(style.noScroll);
+            document.body.classList.remove('noScroll');
         }
     };
+
+    toggleSubmenu = (isSubmenuOpen) => {
+        this.setState({
+            isSubmenuOpen
+        });
+    };
+
+    handleClickOutside() {
+        this.setState({ isSubmenuOpen: false });
+    }
 
     goTo = (e, link) => {
         goTo(e, link);
@@ -39,15 +51,15 @@ class Header extends React.Component {
         this.setState({
             isMenuOpen: false
         });
-        document.body.classList.remove(style.noScroll);
+        document.body.classList.remove('noScroll');
     };
 
     render() {
         const { menuItems, pathname } = this.props;
-        const { isMenuOpen } = this.state;
+        const { isMenuOpen, isSubmenuOpen } = this.state;
         const isMainPage = pathname === `/`;
 
-        return <header className={cn(`header`, { isMainPage, expanded: isMenuOpen })}>
+        return <header className={cn(`header`, { isMainPage, expanded: isMenuOpen, isSubmenuOpen })}>
             <div className={'headerWrapper'}>
                 <div className={'mainWrapper'}>
                     {isMainPage
@@ -95,17 +107,31 @@ class Header extends React.Component {
                                         </a>
                                     </li>
                                 }
-                                {menuItems.map(item => <li>
+                                {menuItems.map(item => <li className={'suck'}>
                                     <a
-                                        onClick={(e) => this.goTo(e, item.link)}
+                                        onClick={(e) => {this.goTo(e, item.link); this.toggleSubmenu(false)}}
+                                        onMouseOver={() => this.toggleSubmenu(true)}
                                         className={cn('headfootLink', {
                                             notMainPage: !isMainPage,
-                                            isCurrentPage: pathname === item.link
+                                            isCurrentPage: (item.link !== '/catalog' && pathname.includes(item.link)) || (pathname === '/catalog' && item.link === '/catalog')
                                         })}
                                         href={item.link}
                                     >
                                         {item.name}
                                     </a>
+                                    <ul className="headerSubmenu">
+                                        {menuItems.map(item => <li>
+                                            <a
+                                                onClick={(e) => {this.goTo(e, item.link); this.toggleSubmenu(false)}}
+                                                className={cn('headfootLink', {
+                                                    notMainPage: !isMainPage
+                                                })}
+                                                href={item.link}
+                                            >
+                                                {item.name}
+                                            </a>
+                                        </li>)}
+                                    </ul>
                                 </li>)}
                             </menu>
                         </div>
@@ -146,4 +172,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default enhanceWithClickOutside(Header);

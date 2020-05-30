@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css.map" afterDir="false" />
@@ -13,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +43,19 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Catalog\BookName\Reviews" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\Header" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\catalog" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Catalog\BookName\Reviews" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -78,7 +76,7 @@
       <workItem from="1590425886306" duration="75000" />
       <workItem from="1590492319059" duration="11857000" />
       <workItem from="1590653146781" duration="26012000" />
-      <workItem from="1590824351553" duration="10031000" />
+      <workItem from="1590824351553" duration="23828000" />
     </task>
     <servers />
   </component>
@@ -109,6 +107,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590068616009" />
+    <state x="1072" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590842265679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1072" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590842265679" />
     <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590828230597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
