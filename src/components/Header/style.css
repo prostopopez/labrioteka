@@ -1,3 +1,4 @@
+/*----------------------------------------*/
 .noScroll {
   height: 100vh !important;
   overflow: hidden;
@@ -29,9 +30,6 @@
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
 }
-.toggle.active span {
-  background-color: hsl(0, 0%, 7%);
-}
 .toggle.active span:nth-of-type(1) {
   transform: rotate(45deg) translate(10px, 10px);
   width: 40px;
@@ -45,13 +43,8 @@
   width: 40px;
 }
 .left {
-  width: 90%;
-}
-.left .mainLink a:first-of-type {
-  display: none;
-}
-.left .mainLink a:last-of-type {
-  display: flex;
+  width: 80%;
+  padding-right: 10%;
 }
 .left .mainIcon {
   fill: white;
@@ -59,10 +52,11 @@
   height: 2vw;
 }
 .left .mainIcon:hover {
-  fill: #ffe8ba;
+  fill: hsl(40, 100%, 86%);
 }
 .left menu {
   width: 100%;
+  padding: 0;
   display: flex;
   flex: auto;
   align-items: center;
@@ -91,10 +85,10 @@
   border-bottom: 0;
 }
 .isCurrentPage {
-  color: #ffe8ba;
+  color: hsl(40, 100%, 86%);
 }
 .isCurrentPage svg {
-  fill: #ffe8ba;
+  fill: hsl(40, 100%, 86%);
 }
 .userToggle {
   display: flex;
@@ -125,34 +119,29 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.isMainPage .headerDescription h1 {
+.isMainPage .headerDescription .h1Wrapper {
+  display: flex;
+  margin: 1.5em 0;
+}
+.isMainPage .headerDescription .h1Wrapper h1 {
   font-size: 3.5vw;
+  margin: 0 0 0 5%;
+}
+.isMainPage .headerDescription .h1Wrapper svg {
+  width: 4vw;
+  height: 4vw;
 }
 .isMainPage .headerDescription p {
   margin-top: 1%;
   font-weight: lighter;
   font-size: 1.5vw;
 }
-.isMainPage .headerDescription button {
-  margin-top: 10%;
-  font-size: 1.2vw;
-  font-weight: 500;
-}
 @media (max-width: 1024px) {
-  .left {
-    width: 85%;
-  }
   .left menu {
     margin: 4% 0;
   }
   .left a {
     font-size: 1.5vw;
-  }
-  .isMainPage {
-    padding: 0 4%;
-  }
-  .isMainPage .headerDescription {
-    margin: 40% 0;
   }
   .isMainPage .headerDescription h1 {
     font-size: 6.5vw;
@@ -169,20 +158,14 @@
 }
 @media (max-width: 768px) {
   .left {
-    width: 90%;
+    width: 80%;
     margin: 0;
     align-items: flex-start;
-  }
-  menu {
-    padding: 0;
   }
 }
 @media (max-width: 414px) {
   .header:not(.isMainPage) {
     background: none;
-  }
-  .left a {
-    font-size: 5vw;
   }
   .headerContentWrapper {
     padding-top: 6%;
@@ -200,6 +183,9 @@
     width: 100%;
     order: 2;
   }
+  .left a {
+    font-size: 8vw;
+  }
   .left + .userToggle {
     display: none;
     width: 100%;
@@ -207,12 +193,6 @@
   }
   .left + .userToggle > div {
     margin-right: auto;
-  }
-  .left .mainLink a:first-of-type {
-    display: flex;
-  }
-  .left .mainLink a:last-of-type {
-    display: none;
   }
   .left menu {
     flex-direction: column;
@@ -224,37 +204,59 @@
   .left li:first-child {
     margin-top: 0;
   }
+  .left .mainIcon {
+    width: 10vw;
+    height: 10vw;
+  }
   .userToggle .userIcon,
   .userToggle .basketIcon {
     width: 10vw;
     height: 10vw;
   }
+  .userToggle a:first-of-type {
+    margin-right: 10%;
+  }
+  .isMainPage {
+    padding: 0 7% 0 8%;
+  }
+  .isMainPage .headerWrapper {
+    padding-top: 4.5%;
+    display: flex;
+  }
   .isMainPage .headerContentWrapper span {
     filter: none;
   }
-  .isMainPage .headerDescription {
-    margin: 85vw 0 55vw 0;
+  .isMainPage .headerDescription .h1Wrapper {
+    display: flex;
+    margin: 1.5em 0;
   }
-  .isMainPage .headerDescription h1 {
+  .isMainPage .headerDescription .h1Wrapper h1 {
     font-size: 12vw;
     line-height: 100%;
+    margin: initial;
+  }
+  .isMainPage .headerDescription .h1Wrapper svg {
+    display: none;
   }
   .isMainPage .headerDescription p {
     font-size: 4vw;
-    margin-top: 12%;
-  }
-  .isMainPage .headerDescription button {
-    font-size: 4vw;
-    margin: 25% 0 0 0;
-    padding: 7% 10%;
-    width: 100%;
+    margin-bottom: 12%;
   }
   .expanded {
     min-height: 100vh;
     max-height: 100vh;
     overflow-y: scroll;
-    padding: 0 4% 0 10%;
-    background: white;
+    padding: 0 0 0 8%;
+    background: hsl(240, 33%, 17%) !important;
+  }
+  .expanded .headerWrapper {
+    display: block;
+  }
+  .expanded.isMainPage {
+    padding: 0 1.2% 0 8%;
+  }
+  .expanded.isMainPage .headerContentWrapper {
+    padding-top: 2%;
   }
   .expanded .headerContentWrapper {
     float: none;
@@ -269,12 +271,9 @@
   .expanded .left li {
     align-self: flex-start;
   }
-  .expanded .left a:not(.isCurrentPage) {
-    color: hsl(0, 0%, 7%);
-  }
   .expanded .left a:not(.isCurrentPage):hover,
   .expanded .left a:not(.isCurrentPage):active {
-    color: #ffe8ba;
+    color: hsl(40, 100%, 86%);
     padding-bottom: 0;
     border-bottom: 0;
   }

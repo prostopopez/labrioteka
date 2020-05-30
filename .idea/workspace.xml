@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/basketIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/bookIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/orderIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/searchIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/userIcon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bookIcon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.less" afterDir="false" />
@@ -17,18 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/BookName/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/BookName/Reviews/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/BookName/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/BookName/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Collections/CollectionName/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Collections/CollectionName/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Collections/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Collections/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Genres/GenreName/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Genres/GenreName/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Genres/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Genres/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
@@ -96,7 +77,8 @@
       <workItem from="1590418761022" duration="276000" />
       <workItem from="1590425886306" duration="75000" />
       <workItem from="1590492319059" duration="11857000" />
-      <workItem from="1590653146781" duration="25736000" />
+      <workItem from="1590653146781" duration="26012000" />
+      <workItem from="1590824351553" duration="10031000" />
     </task>
     <servers />
   </component>
@@ -127,5 +109,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590068616009" />
+    <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590828230597">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590828230597" />
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1590835864476">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590835864476" />
   </component>
 </project>

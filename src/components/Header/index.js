@@ -52,8 +52,16 @@ class Header extends React.Component {
                 <div className={'mainWrapper'}>
                     {isMainPage
                         ? <div className={'headerDescription'}>
-                            <h1>{`Labrioteka`}</h1>
-                            <p>Книжный портал с персональными рекомендациями и личными коллекциями</p>
+                                <div className={'h1Wrapper'}>
+                                <ReactSVG
+                                    src="../img/bookIcon.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('mainIcon')
+                                    }}
+                                />
+                                <h1>{`Labrioteka`}</h1>
+                            </div>
+                            <p>Книжный портал с уникальными коллекциями и широким ассортиментом</p>
                         </div>
                         : null
                     }
@@ -75,12 +83,15 @@ class Header extends React.Component {
                                             href="/"
                                             onClick={(e) => this.goTo(e, `/`)}
                                         >
-                                            <ReactSVG
-                                                src="../img/bookIcon.svg"
-                                                beforeInjection={(svg) => {
-                                                    svg.classList.add('mainIcon')
-                                                }}
-                                            />
+                                            {isMenuOpen
+                                                ? 'Главная'
+                                                : <ReactSVG
+                                                    src="../img/bookIcon.svg"
+                                                    beforeInjection={(svg) => {
+                                                        svg.classList.add('mainIcon')
+                                                    }}
+                                                />
+                                            }
                                         </a>
                                     </li>
                                 }
