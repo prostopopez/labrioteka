@@ -6,9 +6,9 @@ import Reviews from './pages/Catalog/BookName/Reviews'
 import Authors from './pages/Catalog/Authors';
 import AuthorName from './pages/Catalog/Authors/AuthorName';
 import Genres from './pages/Catalog/Genres';
-import GenreName from "./pages/Catalog/Genres/GenreName";
+import GenreName from './pages/Catalog/Genres/GenreName';
 import Collections from './pages/Catalog/Collections';
-import CollectionName from "./pages/Catalog/Collections/CollectionName";
+import CollectionName from './pages/Catalog/Collections/CollectionName';
 import DeliveryPage from './pages/Delivery';
 import ContactPage from './pages/Contacts';
 
@@ -38,13 +38,13 @@ const routes = [
         component: ContactPage
     },
     {
-        path: `/catalog/:id`,
+        path: `/catalog/book:id`,
         exact: true,
         title: ``,
         component: BookName
     },
     {
-        path: `/catalog/:id/reviews`,
+        path: `/catalog/book:id/reviews`,
         exact: true,
         title: ``,
         component: Reviews

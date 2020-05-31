@@ -15,9 +15,10 @@ class DeliveryPage extends React.Component {
     }
 
     render() {
-        return <div className={'mainStyle'}>
+        return <div className={'delivery'}>
             <div className={'mainWrapper'}>
-
+                <h1>{`Доставка`}</h1>
+                <hr/>
             </div>
         </div>;
     }

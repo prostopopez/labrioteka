@@ -107,7 +107,7 @@ class Header extends React.Component {
                                         </a>
                                     </li>
                                 }
-                                {menuItems.map(item => <li className={'suck'}>
+                                {menuItems.map(item => <li className={'forMenuList'}>
                                     <a
                                         onClick={(e) => {this.goTo(e, item.link); this.toggleSubmenu(false)}}
                                         onMouseOver={() => this.toggleSubmenu(true)}
@@ -146,7 +146,7 @@ class Header extends React.Component {
                                 <ReactSVG
                                     src="../img/basketIcon.svg"
                                     beforeInjection={(svg) => {
-                                        svg.classList.add('basketIcon')
+                                        svg.classList.add('menuIcon')
                                     }}
                                 />
                             </a>
@@ -160,7 +160,7 @@ class Header extends React.Component {
                                 <ReactSVG
                                     src="../img/userIcon.svg"
                                     beforeInjection={(svg) => {
-                                        svg.classList.add('userIcon')
+                                        svg.classList.add('menuIcon')
                                     }}
                                 />
                             </a>

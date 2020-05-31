@@ -17,6 +17,10 @@ menu, ul {
     list-style: none;
 }
 
+p, span {
+    font-size: 1vw;
+}
+
 .mainWrapper {
     max-width: 1400px;
     margin: 0 auto;
@@ -39,12 +43,16 @@ menu, ul {
 }
 
 a,
-.userIcon,
 .mainIcon,
-.basketIcon {
+.menuIcon {
     color: @headfoot-text-color;
     fill: @headfoot-text-color;
     text-decoration: none;
+}
+
+.inlineIcon {
+    color: @main-text-color;
+    fill: @main-text-color;
 }
 
 .headfootLink {
@@ -57,9 +65,31 @@ a,
     }
 
     &:hover {
-        .userIcon,
-        .basketIcon {
+        .menuIcon {
             fill: @main-active-color;
         }
+    }
+}
+
+.contacts,
+.catalog,
+.delivery,
+.collections,
+.genres,
+.authors,
+.aboutBook,
+.bookReviews {
+    padding: 4% 0;
+    text-align: center;
+
+    h1 {
+        font-size: 3vw;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    hr {
+        margin-top: 0;
+        width: 100%;
     }
 }

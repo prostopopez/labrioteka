@@ -61,7 +61,7 @@
   flex: auto;
   align-items: center;
 }
-.left .suck {
+.left .forMenuList {
   display: flex;
   flex-direction: column;
 }
@@ -78,7 +78,7 @@
   display: none;
   width: 30vw;
   height: 10.5vw;
-  background-color: #6c9cff;
+  background-color: #28365b;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
@@ -123,8 +123,7 @@
 .userToggle a:first-of-type {
   margin-right: 100%;
 }
-.userToggle .userIcon,
-.userToggle .basketIcon {
+.userToggle .menuIcon {
   width: 1.7vw;
   height: 1.7vw;
 }
@@ -238,8 +237,7 @@
     width: 10vw;
     height: 10vw;
   }
-  .userToggle .userIcon,
-  .userToggle .basketIcon {
+  .userToggle .menuIcon {
     width: 10vw;
     height: 10vw;
   }

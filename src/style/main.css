@@ -76,6 +76,10 @@ menu,
 ul {
   list-style: none;
 }
+p,
+span {
+  font-size: 1vw;
+}
 .mainWrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -101,12 +105,15 @@ ul {
   }
 }
 a,
-.userIcon,
 .mainIcon,
-.basketIcon {
+.menuIcon {
   color: white;
   fill: white;
   text-decoration: none;
+}
+.inlineIcon {
+  color: hsl(0, 0%, 13%);
+  fill: hsl(0, 0%, 13%);
 }
 .headfootLink {
   cursor: pointer;
@@ -116,8 +123,41 @@ a,
 .headfootLink:hover {
   color: hsl(40, 100%, 86%);
 }
-.headfootLink:hover .userIcon,
-.headfootLink:hover .basketIcon {
+.headfootLink:hover .menuIcon {
   fill: hsl(40, 100%, 86%);
+}
+.contacts,
+.catalog,
+.delivery,
+.collections,
+.genres,
+.authors,
+.aboutBook,
+.bookReviews {
+  padding: 4% 0;
+  text-align: center;
+}
+.contacts h1,
+.catalog h1,
+.delivery h1,
+.collections h1,
+.genres h1,
+.authors h1,
+.aboutBook h1,
+.bookReviews h1 {
+  font-size: 3vw;
+  text-transform: uppercase;
+  margin: 0;
+}
+.contacts hr,
+.catalog hr,
+.delivery hr,
+.collections hr,
+.genres hr,
+.authors hr,
+.aboutBook hr,
+.bookReviews hr {
+  margin-top: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
