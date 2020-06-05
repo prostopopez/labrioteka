@@ -12,60 +12,81 @@ const ContactPage = () => {
                 <p>«Labrioteka» – современный книжный интернет-ресурс, успешно работающий даже во время карантина.</p>
                 <div className={'contactsFlex'}>
                     <div className={'leftContacts'}>
-                        <form action=""></form>
+                        <form>
+
+                            <input type='tel' placeholder={'Введите ваш телефон'} pattern='[+][0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}' required={true}/>
+                            <textarea cols='30' rows='10' placeholder={'Введите сообщение'} required={true}/>
+                            <input type='submit'/>
+                        </form>
                     </div>
                     <div className={'rightContacts'}>
                         <div className={'aboutUsInfo'}>
-                            <ReactSVG
-                            src="../img/mapIcon.svg"
-                            beforeInjection={(svg) => {
-                                svg.classList.add('inlineIcon')
-                            }}
-                            />
-                            <span>
-                                   <strong>Labrioteka</strong>
-                                   Россия, Пенза, Пензенская область, улица Пупкина 104-4, 440000
-                               </span>
-                            <ReactSVG
-                                src="../img/phoneIcon.svg"
-                                beforeInjection={(svg) => {
-                                    svg.classList.add('inlineIcon')
-                                }}
-                            />
-                            <span>+ 7 (960) 000-00-00</span>
-                            <ReactSVG
-                                src="../img/mailIcon.svg"
-                                beforeInjection={(svg) => {
-                                    svg.classList.add('inlineIcon')
-                                }}
-                            />
-                            <span>prostopopez@gmail.com</span>
+                            <div>
+                                <ReactSVG
+                                    src="../img/mapIcon.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                                <span>
+                                    <strong>Labrioteka</strong><br/>
+                                    Россия, Пенза, Пензенская область,<br/>
+                                    улица Пупкина 104-4, 440000<br/>
+                                </span>
+                            </div>
+                            <div>
+                                <ReactSVG
+                                    src="../img/phoneIcon.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                                <span>+ 7 (960) 000-00-00</span>
+                            </div>
+                            <div>
+                                <ReactSVG
+                                    src="../img/mailIcon.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                                <span>prostopopez@gmail.com</span>
+                            </div>
                         </div>
+                        <hr/>
                         <div className={'socialNetworkInfo'}>
-                            <ReactSVG
-                                src="../img/mailIcon.svg"
-                                beforeInjection={(svg) => {
-                                    svg.classList.add('inlineIcon')
-                                }}
-                            />
-                            <ReactSVG
-                                src="../img/mailIcon.svg"
-                                beforeInjection={(svg) => {
-                                    svg.classList.add('inlineIcon')
-                                }}
-                            />
-                            <ReactSVG
-                                src="../img/mailIcon.svg"
-                                beforeInjection={(svg) => {
-                                    svg.classList.add('inlineIcon')
-                                }}
-                            />
-                            <ReactSVG
-                                src="../img/mailIcon.svg"
-                                beforeInjection={(svg) => {
-                                    svg.classList.add('inlineIcon')
-                                }}
-                            />
+                            <a href="https://vk.com/gtaas">
+                                <ReactSVG
+                                    src="../img/ContactsLogos/vkLogo.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                            </a>
+                            <a href="#">
+                                <ReactSVG
+                                    src="../img/ContactsLogos/tgLogo.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                            </a>
+                            <a href="https://www.facebook.com/people/Prostopopez-Aot/100009744790989">
+                                <ReactSVG
+                                    src="../img/ContactsLogos/fbLogo.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                            </a>
+                            <a href="https://www.youtube.com/prostopopez">
+                                <ReactSVG
+                                    src="../img/ContactsLogos/ytLogo.svg"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('inlineIcon')
+                                    }}
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>

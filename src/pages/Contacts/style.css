@@ -1,13 +1,34 @@
 .contactsFlex {
   padding-top: 4%;
+  position: relative;
   display: flex;
   justify-content: space-around;
+}
+.contactsFlex hr {
+  margin-top: 0.5vw;
+  margin-bottom: 0.8vw;
 }
 .leftContacts {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.leftContacts form {
+  display: flex;
+  flex-direction: column;
+}
+.leftContacts form input,
+.leftContacts form textarea {
+  margin-bottom: 0.8vw;
+  width: 30vw;
+  font-size: 1vw;
+}
+.leftContacts form input {
+  height: 2vw;
+}
+.leftContacts form textarea {
+  resize: vertical;
 }
 @media (max-width: 768px) {
   .leftContacts {
@@ -16,11 +37,29 @@
     margin: 0 auto 30px;
   }
 }
-.rightContacts .aboutUsInfo .inlineIcon {
-  width: 2vw;
-  height: 2vw;
+.rightContacts {
+  width: 30vw;
+}
+.rightContacts .aboutUsInfo {
+  text-align: right;
+}
+.rightContacts .aboutUsInfo div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8vw;
+}
+.rightContacts .aboutUsInfo span {
+  margin-bottom: 10px;
 }
 .rightContacts .aboutUsInfo span * {
   display: inline-block;
+}
+.rightContacts .socialNetworkInfo {
+  display: flex;
+  justify-content: space-around;
+}
+.rightContacts .inlineIcon {
+  width: 2vw;
+  height: 2vw;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,13 @@
 .contactsFlex {
     padding-top: 4%;
+    position: relative;
     display: flex;
     justify-content: space-around;
+
+    hr {
+        margin-top: 0.5vw;
+        margin-bottom: 0.8vw;
+    }
 }
 
 .leftContacts {
@@ -9,6 +15,26 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input, textarea {
+            margin-bottom: 0.8vw;
+            width: 30vw;
+            font-size: 1vw;
+        }
+
+        input {
+            height: 2vw;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+    }
 
     @media (max-width: 768px) {
         width: 95%;
@@ -18,18 +44,33 @@
 }
 
 .rightContacts {
+    width: 30vw;
+
     .aboutUsInfo {
-        .inlineIcon {
-            width: 2vw;
-            height: 2vw;
+        text-align: right;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 0.8vw;
         }
 
-        span * {
-            display: inline-block;
+        span {
+            margin-bottom: 10px;
+            * {
+                display: inline-block;
+            }
         }
     }
 
     .socialNetworkInfo {
+        display: flex;
+        justify-content: space-around;
+    }
 
+    .inlineIcon {
+        width: 2vw;
+        height: 2vw;
     }
 }
