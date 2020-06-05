@@ -1,5 +1,8 @@
+@import url("../../style/variables.less");
+
 .contactsFlex {
-    padding-top: 4%;
+    margin-bottom: 5vw;
+    padding-top: 3vw;
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -19,27 +22,58 @@
     form {
         display: flex;
         flex-direction: column;
+        width: 30vw;
 
-        input, textarea {
+        input,
+        .telephoneInput,
+        .telephoneInput input,
+        textarea {
             margin-bottom: 0.8vw;
-            width: 30vw;
+            padding-left: 8px;
+            border: 1px solid hsl(0, 0%, 79%);
+            border-radius: 5px;
+            height: 2vw;
             font-size: 1vw;
         }
 
-        input {
-            height: 2vw;
+        .telephoneInput {
+            padding-left: 0;
+            display: flex;
+            justify-content: flex-start;
+
+            div {
+                border: none;
+            }
+
+            input {
+                border: none;
+                padding-left: 48px;
+                width: 100%;
+            }
+        }
+
+        .isFieldActive .telephoneInput {
+            border: 2px solid black;
         }
 
         textarea {
+            height: 5vw;
             resize: vertical;
         }
 
-    }
+        .submitButton {
+            background-color: @headfoot-back-color;
+            color: @headfoot-text-color;
 
-    @media (max-width: 768px) {
-        width: 95%;
-        align-items: flex-start;
-        margin: 0 auto 30px;
+            &:hover {
+                cursor: pointer;
+                border: none;
+                box-shadow: 0.2vw 0.2vw 0.2vw @main-active-color,
+                -0.2vw -0.2vw 0.2vw @main-active-color,
+                0.2vw -0.2vw 0.2vw @main-active-color,
+                -0.2vw 0.2vw 0.2vw @main-active-color;
+            }
+        }
     }
 }
 
@@ -72,5 +106,62 @@
     .inlineIcon {
         width: 2vw;
         height: 2vw;
+    }
+}
+
+label {
+    margin: 0 auto;
+    width: 90%;
+    height: 3vw;
+    display: block;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    :checked + .card,
+    &:hover .card {
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+        box-shadow: 0 20px 20px rgba(50,50,50,.2);
+    }
+
+    &:hover {
+        :checked + .card {
+            transform: rotateX(160deg);
+            -webkit-transform: rotateX(160deg);
+            box-shadow: 0 20px 20px rgba(255,255,255,.2);
+        }
+    }
+
+    .card {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: all 1200ms;
+        transition: all 1200ms;
+        z-index: 20;
+
+        div {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: @headfoot-text-color;
+            text-align: center;
+            line-height: 3vw;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 2px;
+        }
+
+        .back {
+            background: @headfoot-back-color;
+            color: @headfoot-text-color;
+            -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+        }
     }
 }

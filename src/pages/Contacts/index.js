@@ -1,22 +1,33 @@
 import React from 'react';
+import TelephoneInput from '../../components/TelephoneInput';
+import {ReactSVG} from 'react-svg';
+import  './style.css';
 import '../../style/main.css';
-import './style.css';
-import {ReactSVG} from "react-svg";
 
-const ContactPage = () => {
-    return (
-        <div className={'contacts'}>
+class ContactPage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            phone: ``
+        };
+    }
+
+    render() {
+        return <div className={'contacts'}>
             <div className={'mainWrapper'}>
                 <h1>{`Контакты`}</h1>
                 <hr/>
-                <p>«Labrioteka» – современный книжный интернет-ресурс, успешно работающий даже во время карантина.</p>
+                <p>«Labrioteka» – современный книжный интернет-ресурс, успешно работающий даже во время
+                    карантина.</p>
                 <div className={'contactsFlex'}>
                     <div className={'leftContacts'}>
                         <form>
-
-                            <input type='tel' placeholder={'Введите ваш телефон'} pattern='[+][0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}' required={true}/>
+                            <input type='name' placeholder={'Введите ваши инициалы'} required={true}/>
+                            <input type='email' placeholder={'Введите вашу почту'} required={true}/>
+                            <TelephoneInput/>
                             <textarea cols='30' rows='10' placeholder={'Введите сообщение'} required={true}/>
-                            <input type='submit'/>
+                            <input className={'submitButton'} type='submit'/>
                         </form>
                     </div>
                     <div className={'rightContacts'}>
@@ -29,10 +40,10 @@ const ContactPage = () => {
                                     }}
                                 />
                                 <span>
-                                    <strong>Labrioteka</strong><br/>
-                                    Россия, Пенза, Пензенская область,<br/>
-                                    улица Пупкина 104-4, 440000<br/>
-                                </span>
+                                <strong>Labrioteka</strong><br/>
+                                Россия, Пенза, Пензенская область,<br/>
+                                улица Пупкина 104-4, 440000<br/>
+                            </span>
                             </div>
                             <div>
                                 <ReactSVG
@@ -63,7 +74,7 @@ const ContactPage = () => {
                                     }}
                                 />
                             </a>
-                            <a href="#">
+                            <a href="/404">
                                 <ReactSVG
                                     src="../img/ContactsLogos/tgLogo.svg"
                                     beforeInjection={(svg) => {
@@ -90,9 +101,53 @@ const ContactPage = () => {
                         </div>
                     </div>
                 </div>
+                <h2>Ответы на часто задаваемые вопросы</h2>
+                <hr/>
+                <label>
+                    <input type="checkbox"/>
+                    <div className="card">
+                        <div className="front">Как мне подробнее узнать о товаре, который я нашел на вашем сайте?</div>
+                        <div className="back">На странице с товаром представлена вся информация, которой в настоящий момент обладает магазин.</div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <div className="card">
+                        <div className="front">Мне нужна книга по такой-то теме. А у вас по этой теме несколько книг. Помогите выбрать лучшую.</div>
+                        <div className="back">В своем выборе вы можете опереться на рейтинг (от 1 до 5), который указаны на странице с товаром.</div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <div className="card">
+                        <div className="front">Мне нужен именно данный товар. Он у вас есть?</div>
+                        <div className="back">Попробуйте воспользоваться поисковой строкой на странице "Каталог". Поиск ведётся по названию, автору, жанру, коллекции и т.д.</div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <div className="card">
+                        <div className="front">Сегодня дата отправки, которая была указана на вашем сайте? Почему заказ еще не отправлен?</div>
+                        <div className="back">Дата отправки указывается как примерная. Она может меняться как в меньшую, так и в большую сторону.</div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <div className="card">
+                        <div className="front"> Я не могу зайти на сайт. Система говорит, что пользователь с таким email не зарегистрирован. Что делать?</div>
+                        <div className="back">В большинстве случаев это происходит из-за того, что вы случайно сделали ошибку при вводе своего электронного адреса или пароля при регистрации.</div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <div className="card">
+                        <div className="front">Как мне удалить мою регистрационную запись (экаунт)?</div>
+                        <div className="back">Перейдите в панель управления аккаунтом. Обратите внимание, что после нажатия на кнопку "Удалить аккаунт", ваша запись будет немедленно удалена без возможности восстановления.</div>
+                    </div>
+                </label>
             </div>
         </div>
-    );
-};
+    }
+}
 
 export default ContactPage;

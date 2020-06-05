@@ -149,6 +149,16 @@ a,
   text-transform: uppercase;
   margin: 0;
 }
+.contacts h2,
+.catalog h2,
+.delivery h2,
+.collections h2,
+.genres h2,
+.authors h2,
+.aboutBook h2,
+.bookReviews h2 {
+  font-size: 2vw;
+}
 .contacts hr,
 .catalog hr,
 .delivery hr,

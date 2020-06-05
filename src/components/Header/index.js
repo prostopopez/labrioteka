@@ -93,7 +93,7 @@ class Header extends React.Component {
                                         <a
                                             className={cn('headfootLink', 'notMainPage')}
                                             href="/"
-                                            onClick={(e) => this.goTo(e, `/`)}
+                                            onClick={(e) => {this.goTo(e, `/`); this.toggleSubmenu(false)}}
                                         >
                                             {isMenuOpen
                                                 ? 'Главная'
@@ -137,7 +137,7 @@ class Header extends React.Component {
                         </div>
                         <div className={cn(`userToggle`, { active: isMainPage })}>
                             <a
-                                onClick={(e) => this.goTo(e, `/profile/basket`)}
+                                onClick={(e) => {this.goTo(e, `/profile/basket`); this.toggleSubmenu(false)}}
                                 className={cn('headfootLink', {
                                     isCurrentPage: pathname === '/profile/basket'
                                 })}
@@ -151,7 +151,7 @@ class Header extends React.Component {
                                 />
                             </a>
                             <a
-                                onClick={(e) => this.goTo(e, `/profile`)}
+                                onClick={(e) => {this.goTo(e, `/profile`); this.toggleSubmenu(false)}}
                                 className={cn('headfootLink', {
                                     isCurrentPage: pathname === '/profile'
                                 })}

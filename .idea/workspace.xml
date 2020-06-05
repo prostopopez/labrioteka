@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/TelephoneInput/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/ContactsLogos/vkLogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/ContactsLogos/vkLogo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Contacts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,26 +38,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/TelephoneInput" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\Header" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\catalog" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Catalog\BookName\Reviews" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -82,7 +88,7 @@
       <workItem from="1591089059052" duration="994000" />
       <workItem from="1591094456833" duration="354000" />
       <workItem from="1591109257028" duration="599000" />
-      <workItem from="1591348770002" duration="4449000" />
+      <workItem from="1591348770002" duration="18632000" />
     </task>
     <servers />
   </component>
@@ -101,10 +107,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590924614147" />
-    <state x="1170" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590069674316">
+    <state x="1170" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591366639929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1170" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590069674316" />
+    <state x="1170" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591366639929" />
     <state x="1075" y="300" width="730" height="633" key="EditFileWatcherDialog" timestamp="1590068551175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -125,9 +131,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590828230597" />
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1590835864476">
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1591363480007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590835864476" />
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591363480007" />
   </component>
 </project>
