@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/services/locationService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/ContactsLogos/fbLogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/ContactsLogos/fbLogo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/mailIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/mailIcon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Delivery/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,19 +46,19 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\Header" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\catalog" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -85,7 +91,7 @@
       <workItem from="1591109257028" duration="599000" />
       <workItem from="1591348770002" duration="19263000" />
       <workItem from="1591427678845" duration="1000" />
-      <workItem from="1591427703030" duration="2566000" />
+      <workItem from="1591427703030" duration="21096000" />
     </task>
     <servers />
   </component>
