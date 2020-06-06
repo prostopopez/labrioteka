@@ -7,11 +7,17 @@ class DeliveryPage extends React.Component {
         super();
 
         this.state = {
-            sights: [],
-            feedback: [],
-            news: [],
-            articles: []
+            something: null
         };
+    }
+
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            let lat = position.coords.latitude;
+            let lng = position.coords.longitude;
+
+            console.log(lat, lng);
+        });
     }
 
     render() {
