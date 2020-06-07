@@ -77,7 +77,8 @@ ul {
   list-style: none;
 }
 p,
-span {
+span,
+table {
   font-size: 1vw;
 }
 .mainWrapper {

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/locationService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Delivery/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,26 +41,29 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/TelephoneInput" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/services" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\services" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\Header" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\catalog" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Delivery" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\Contacts" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -91,7 +96,11 @@
       <workItem from="1591109257028" duration="599000" />
       <workItem from="1591348770002" duration="19263000" />
       <workItem from="1591427678845" duration="1000" />
-      <workItem from="1591427703030" duration="21096000" />
+      <workItem from="1591427703030" duration="22029000" />
+      <workItem from="1591523785458" duration="3788000" />
+      <workItem from="1591527648891" duration="46000" />
+      <workItem from="1591528151872" duration="131000" />
+      <workItem from="1591529766381" duration="13573000" />
     </task>
     <servers />
   </component>
@@ -106,6 +115,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="177" key="#Configure_Path_Variables/0.0.1920.1040@0.0.1920.1040" timestamp="1590068587697" />
+    <state x="1032" y="177" key="#ESLint" timestamp="1591530468365">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="177" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1591530468365" />
     <state x="828" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590924614147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
