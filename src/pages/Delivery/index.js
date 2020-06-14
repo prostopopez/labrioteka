@@ -8,13 +8,13 @@ class DeliveryPage extends React.Component {
         super(props);
 
         this.state = {
-            location: null,
+            location: null
         };
     }
 
     async componentDidMount() {
         this.setState({
-            location: await getCoords(),
+            location: await getCoords()
         });
 
         this.translit();
