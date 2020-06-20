@@ -75,8 +75,11 @@ a,
 .catalog,
 .delivery,
 .collections,
+.aboutCollection,
 .genres,
+.aboutGenre,
 .authors,
+.aboutAuthor,
 .aboutBook,
 .bookReviews {
     padding: 4% 0;
@@ -86,10 +89,24 @@ a,
         font-size: 3vw;
         text-transform: uppercase;
         margin: 0;
+
+        @media (max-width: 414px) {
+            margin-top: 20vw;
+            font-size: 8vw;
+        }
     }
 
     h2 {
         font-size: 2vw;
+    }
+
+    h3 {
+        font-size: 2vw;
+
+        @media (max-width: 414px) {
+            margin-top: 20vw;
+            font-size: 6vw;
+        }
     }
 
     hr {

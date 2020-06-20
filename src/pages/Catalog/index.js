@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import BookShelf from '../../components/BookShelf';
 import './style.css';
 import '../../style/main.css';
@@ -9,10 +8,9 @@ class CatalogPage extends React.Component {
         super();
 
         this.state = {
-            data: [],
-            id: 0,
-            rank: null,
-            description: null,
+            dataBooks: [],
+            dataAuthors: [],
+            dataGenres: [],
             intervalIsSet: false,
             idToDelete: null,
             idToUpdate: null,
@@ -21,15 +19,31 @@ class CatalogPage extends React.Component {
     }
 
     componentDidMount() {
-        this.getDataFromDb();
+        this.getDataFromDbBooks();
         if (!this.state.intervalIsSet) {
-            let interval = setInterval(this.getDataFromDb, 1000);
+            let interval = setInterval(this.getDataFromDbBooks, 1000);
+            this.setState({ intervalIsSet: interval });
+        }
+
+        this.getDataFromDbAuthors();
+        if (!this.state.intervalIsSet) {
+            let interval = setInterval(this.getDataFromDbAuthors, 1000);
+            this.setState({ intervalIsSet: interval });
+        }
+
+        this.getDataFromDbAuthors();
+        if (!this.state.intervalIsSet) {
+            let interval = setInterval(this.getDataFromDbAuthors, 1000);
+            this.setState({ intervalIsSet: interval });
+        }
+
+        this.getDataFromDbGenres();
+        if (!this.state.intervalIsSet) {
+            let interval = setInterval(this.getDataFromDbGenres, 1000);
             this.setState({ intervalIsSet: interval });
         }
     }
 
-    // never let a process live forever
-    // always kill a process everytime we are done using it
     componentWillUnmount() {
         if (this.state.intervalIsSet) {
             clearInterval(this.state.intervalIsSet);
@@ -37,88 +51,64 @@ class CatalogPage extends React.Component {
         }
     }
 
-    // just a note, here, in the front end, we use the id key of our data object
-    // in order to identify which we want to Update or delete.
-    // for our back end, we use the object id assigned by MongoDB to modify
-    // data base entries
-
-    // our first get method that uses our backend api to
-    // fetch data from our data base
-    getDataFromDb = () => {
-        fetch('http://localhost:3001/api/getData')
+    getDataFromDbBooks = () => {
+        fetch('http://localhost:3001/api/getBooksData')
             .then((data) => data.json())
-            .then((res) => this.setState({ data: res.data }));
+            .then((res) => this.setState({ dataBooks: res.data }));
     };
 
-    // our put method that uses our backend api
-    // to create new query into our data base
-    putDataToDB = (rank, description) => {
-        let currentIds = this.state.data.map((data) => data.id);
-        let idToBeAdded = 0;
-        while (currentIds.includes(idToBeAdded)) {
-            ++idToBeAdded;
-        }
-
-        axios.post('http://localhost:3001/api/putData', {
-            id: idToBeAdded,
-            rank: rank,
-            description: description,
-        });
+    getDataFromDbAuthors = () => {
+        fetch('http://localhost:3001/api/getAuthorsData')
+            .then((data) => data.json())
+            .then((res) => this.setState({ dataAuthors: res.data }));
     };
 
-    // our delete method that uses our backend api
-    // to remove existing database information
-    deleteFromDB = (idTodelete) => {
-        parseInt(idTodelete);
-        let objIdToDelete = null;
-        this.state.data.forEach((dat) => {
-            if (dat.id == idTodelete) {
-                objIdToDelete = dat._id;
-            }
-        });
-
-        axios.delete('http://localhost:3001/api/deleteData', {
-            data: {
-                id: objIdToDelete,
-            },
-        });
+    getDataFromDbGenres = () => {
+        fetch('http://localhost:3001/api/getGenresData')
+            .then((data) => data.json())
+            .then((res) => this.setState({ dataGenres: res.data }));
     };
 
-    // our update method that uses our backend api
-    // to overwrite existing data base information
-    updateDB = (idToUpdate, updateToApply) => {
-        let objIdToUpdate = null;
-        parseInt(idToUpdate);
-        this.state.data.forEach((dat) => {
-            if (dat.id == idToUpdate) {
-                objIdToUpdate = dat._id;
-            }
-        });
-
-        axios.post('http://localhost:3001/api/updateData', {
-            id: objIdToUpdate,
-            update: { description: updateToApply },
-        });
-    };
 
     render() {
-        const { data } = this.state;
+        const { dataBooks, dataAuthors, dataGenres } = this.state;
 
         return <div className={'catalog'}>
             <div className={'mainWrapper'}>
                 <h1>{`Каталог`}</h1>
                 <hr/>
-                {data.length <= 0
+                {dataBooks.length <= 0
                     ? 'Нет данных'
-                    : data.map((dat) => (
-                        <BookShelf
-                            rank={dat.rank}
-                            description={dat.description}
-                        />
-                    ))
+                    : dataBooks.map((dataBook) => {
+                        const bookAuthor = dataAuthors.map((dataAuthor) => {
+                            if (dataAuthor.books_id.includes(dataBook._id)){
+                                return dataAuthor.authorName;
+                            }
+                        });
+
+                        const bookGenre = (dataGenres.map((dataGenre) => {
+                            if (dataGenre.books_id.includes(dataBook._id)){
+                                return dataGenre.genreName;
+                            }
+                        }));
+
+                        return <BookShelf
+                            name={dataBook.bookName}
+                            price={dataBook.bookPrice}
+                            genres={bookGenre}
+                            author={bookAuthor}
+                            collection={dataBook.bookCollection}
+                            publisher={dataBook.bookPublisher}
+                            date={dataBook.bookPubDate}
+                            rank={dataBook.bookRating}
+                            img={dataBook.bookImg}
+                            description={dataBook.bookDescription}
+                        />;
+                    })
                 }
             </div>
         </div>
+
     }
 }
 

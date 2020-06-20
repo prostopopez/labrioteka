@@ -6,7 +6,15 @@ import '../../style/main.css';
 const BookShelf = (props) => {
     const {
         rank,
-        description,
+        img,
+        price,
+        name,
+        author,
+        genres,
+        date,
+        publisher,
+        collection,
+        description
     } = props;
 
     const isOverLength = description.length >= 200;
@@ -21,13 +29,13 @@ const BookShelf = (props) => {
                 className={'stars'}
             />
             <img
-                src="https://pngimg.com/uploads/book/book_PNG51049.png"
+                src={img}
                 alt=""/>
-            <span>1600.00 &#8381;</span>
+            <span>{price} &#8381;</span>
         </div>
         <div className={'bookShelfRight'}>
-            <h3>Семь смертей Эвелины Хардкасл</h3>
-            <a href={'/author'}>Стюарт Тёртон</a>
+            <h3>{name}</h3>
+            <a href={'/author'}>{author}</a>
             <div className={'bookShelfButtons'}>
                 <a href={'/'}>
                     <button>В корзину</button>
@@ -37,27 +45,34 @@ const BookShelf = (props) => {
                 </a>
             </div>
             <div className={'bookShelfGenres'}>
-                <a href={'/'}>Современная зарубежная литература</a>
-                <a href={'/'}>Люблю аниме</a>
-                <a href={'/'}>Классическая русская литература</a>
-                <a href={'/'}>Люблю мангу</a>
-                <a href={'/'}>Современная зарубежная литература</a>
-                <a href={'/'}>Люблю аниме</a>
-                <a href={'/'}>Классическая русская литература</a>
-                <a href={'/'}>Люблю мангу</a>
+                {genres.length <= 0
+                    ? 'Нет жанра'
+                    : genres.map((genre) => {
+                        if (genre === undefined) {
+                            return null;
+                        } else {
+                            return (
+                                <div>
+                                    <a href={'/'}>{genre[0]}</a>
+                                    <a href={'/'}>{genre[1]}</a>
+                                </div>
+                            )
+                        }
+                    })
+                }
             </div>
             <div className={'bookShelfInfo'}>
                 <div>
                     <strong>Год издания:</strong>
-                    <span>2020</span>
+                    <span>{date}</span>
                 </div>
                 <div>
                     <strong>Издательство:</strong>
-                    <a href={'/'}>Аниме</a>
+                    <a href={'/'}>{publisher}</a>
                 </div>
                 <div>
                     <strong>Коллекция:</strong>
-                    <a href={'/'}>Лучшие аниме</a>
+                    <a href={'/'}>{collection}</a>
                 </div>
             </div>
             <p>

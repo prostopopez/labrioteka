@@ -9,7 +9,6 @@
     background-color: @headfoot-text-color;
 
     > div {
-
         margin: 0.5vw 1.5vw;
         display: flex;
         flex-direction: column;
@@ -40,7 +39,6 @@
 
     h3 {
         margin: 0;
-        font-size: 2vw;
 
         + a {
             font-size: 1.5vw;
@@ -124,6 +122,65 @@
                 color:  @headfoot-back-color;
                 text-shadow: 1px 1px @headfoot-back-color;
             }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .bookShelf > div {
+        justify-content: center;
+    }
+
+    .bookShelfLeft {
+        .stars span {
+            font-size: 8vw !important;
+        }
+
+        img {
+            width: 35vw;
+            height: 50vw;
+        }
+
+        span {
+            font-size: 5vw;
+        }
+    }
+
+    .bookShelfRight {
+        text-align: center;
+        h3 {
+            + a {
+                font-size: 5vw;
+            }
+        }
+
+        .bookShelfButtons {
+            a {
+                display: flex;
+                flex-direction: column;
+                margin-top: 2vw;
+
+                button {
+                    padding: 2vw;
+                    font-size: 5vw;
+                }
+            }
+        }
+
+        .bookShelfGenres {
+            margin-top: 2vw;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-size: 3vw;
+                margin-bottom: 2vw;
+            }
+        }
+
+        .bookShelfInfo,
+        p {
+            display: none;
         }
     }
 }

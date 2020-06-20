@@ -312,5 +312,8 @@
   .expanded .headerDescription {
     display: none;
   }
+  .expanded.isSubmenuOpen .left .headerSubmenu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

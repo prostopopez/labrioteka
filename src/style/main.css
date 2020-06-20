@@ -132,8 +132,11 @@ a,
 .catalog,
 .delivery,
 .collections,
+.aboutCollection,
 .genres,
+.aboutGenre,
 .authors,
+.aboutAuthor,
 .aboutBook,
 .bookReviews {
   padding: 4% 0;
@@ -143,30 +146,84 @@ a,
 .catalog h1,
 .delivery h1,
 .collections h1,
+.aboutCollection h1,
 .genres h1,
+.aboutGenre h1,
 .authors h1,
+.aboutAuthor h1,
 .aboutBook h1,
 .bookReviews h1 {
   font-size: 3vw;
   text-transform: uppercase;
   margin: 0;
 }
+@media (max-width: 414px) {
+  .contacts h1,
+  .catalog h1,
+  .delivery h1,
+  .collections h1,
+  .aboutCollection h1,
+  .genres h1,
+  .aboutGenre h1,
+  .authors h1,
+  .aboutAuthor h1,
+  .aboutBook h1,
+  .bookReviews h1 {
+    margin-top: 20vw;
+    font-size: 8vw;
+  }
+}
 .contacts h2,
 .catalog h2,
 .delivery h2,
 .collections h2,
+.aboutCollection h2,
 .genres h2,
+.aboutGenre h2,
 .authors h2,
+.aboutAuthor h2,
 .aboutBook h2,
 .bookReviews h2 {
   font-size: 2vw;
+}
+.contacts h3,
+.catalog h3,
+.delivery h3,
+.collections h3,
+.aboutCollection h3,
+.genres h3,
+.aboutGenre h3,
+.authors h3,
+.aboutAuthor h3,
+.aboutBook h3,
+.bookReviews h3 {
+  font-size: 2vw;
+}
+@media (max-width: 414px) {
+  .contacts h3,
+  .catalog h3,
+  .delivery h3,
+  .collections h3,
+  .aboutCollection h3,
+  .genres h3,
+  .aboutGenre h3,
+  .authors h3,
+  .aboutAuthor h3,
+  .aboutBook h3,
+  .bookReviews h3 {
+    margin-top: 20vw;
+    font-size: 6vw;
+  }
 }
 .contacts hr,
 .catalog hr,
 .delivery hr,
 .collections hr,
+.aboutCollection hr,
 .genres hr,
+.aboutGenre hr,
 .authors hr,
+.aboutAuthor hr,
 .aboutBook hr,
 .bookReviews hr {
   margin-top: 0;

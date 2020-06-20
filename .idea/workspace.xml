@@ -2,29 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/getBooksData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BookShelf/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BookShelf/style.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/dbSetUp/booksConnect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/getBooks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/getAuthorsData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/getGenresData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AuthorShelf/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AuthorShelf/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CollectionShelf/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CollectionShelf/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/getBooksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/getBooksData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Delivery/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Delivery/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/bookShelf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/CollectionShelf" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,15 +65,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\CollectionShelf" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\AuthorShelf" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\bookShelf" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\services" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\lang" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\services\dbSetUp" />
@@ -148,7 +149,14 @@
       <workItem from="1591871155141" duration="16120000" />
       <workItem from="1591894655802" duration="224000" />
       <workItem from="1591951185255" duration="9959000" />
-      <workItem from="1592127045088" duration="18524000" />
+      <workItem from="1592127045088" duration="20235000" />
+      <workItem from="1592217199785" duration="686000" />
+      <workItem from="1592392158744" duration="17000" />
+      <workItem from="1592400697670" duration="608000" />
+      <workItem from="1592457569576" duration="6000" />
+      <workItem from="1592458374753" duration="14015000" />
+      <workItem from="1592555346298" duration="6988000" />
+      <workItem from="1592622041726" duration="16263000" />
     </task>
     <servers />
   </component>
@@ -175,14 +183,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591366639929" />
-    <state x="1075" y="300" width="730" height="633" key="EditFileWatcherDialog" timestamp="1590068551175">
+    <state x="1075" y="300" width="730" height="633" key="EditFileWatcherDialog" timestamp="1592629135476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1075" y="300" width="730" height="633" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590068551175" />
-    <state x="1220" y="277" key="FileChooserDialogImpl" timestamp="1591087038715">
+    <state x="1075" y="300" width="730" height="633" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592629135476" />
+    <state x="1220" y="277" key="FileChooserDialogImpl" timestamp="1592629134192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591087038715" />
+    <state x="1220" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592629134192" />
     <state width="936" height="271" key="GridCell.Tab.0.bottom" timestamp="1591787309005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -199,10 +207,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="936" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591787309005" />
-    <state x="1004" y="154" width="916" height="739" key="SettingsEditor" timestamp="1591883183640">
+    <state x="1004" y="154" width="916" height="739" key="SettingsEditor" timestamp="1592629136512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1004" y="154" width="916" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591883183640" />
+    <state x="1004" y="154" width="916" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592629136512" />
     <state x="1072" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591430407870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -211,9 +219,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591884377076" />
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1592141719485">
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1592474901352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592141719485" />
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592474901352" />
   </component>
 </project>

@@ -32,7 +32,6 @@
 }
 .bookShelfRight h3 {
   margin: 0;
-  font-size: 2vw;
 }
 .bookShelfRight h3 + a {
   font-size: 1.5vw;
@@ -100,5 +99,48 @@
 .bookShelfRight .bookShelfInfo a:hover {
   color: hsl(240, 33%, 17%);
   text-shadow: 1px 1px hsl(240, 33%, 17%);
+}
+@media (max-width: 414px) {
+  .bookShelf > div {
+    justify-content: center;
+  }
+  .bookShelfLeft .stars span {
+    font-size: 8vw !important;
+  }
+  .bookShelfLeft img {
+    width: 35vw;
+    height: 50vw;
+  }
+  .bookShelfLeft span {
+    font-size: 5vw;
+  }
+  .bookShelfRight {
+    text-align: center;
+  }
+  .bookShelfRight h3 + a {
+    font-size: 5vw;
+  }
+  .bookShelfRight .bookShelfButtons a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+  }
+  .bookShelfRight .bookShelfButtons a button {
+    padding: 2vw;
+    font-size: 5vw;
+  }
+  .bookShelfRight .bookShelfGenres {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .bookShelfRight .bookShelfGenres a {
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+  .bookShelfRight .bookShelfInfo,
+  .bookShelfRight p {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

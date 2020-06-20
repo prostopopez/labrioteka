@@ -1,33 +1,61 @@
 import React from 'react';
+import AuthorShelf from '../../../components/AuthorShelf';
 import './style.css';
 import '../../../style/main.css';
 
 class Authors extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
-            checked: false,
-            item: {
-                name: ``,
-                email: ``,
-                phoneNumber: ``,
-                commentaries: ``
-            },
-            errors: {
-                name: null,
-                email: null,
-                commentaries: null,
-                checked: null
-            }
+            dataAuthors: [],
+            intervalIsSet: false,
+            idToDelete: null,
+            idToUpdate: null,
+            objectToUpdate: null,
         };
     }
 
+    componentDidMount() {
+        this.getDataFromDb();
+        if (!this.state.intervalIsSet) {
+            let interval = setInterval(this.getDataFromDb, 1000);
+            this.setState({ intervalIsSet: interval });
+        }
+    }
+
+    componentWillUnmount() {
+        if (this.state.intervalIsSet) {
+            clearInterval(this.state.intervalIsSet);
+            this.setState({ intervalIsSet: null });
+        }
+    }
+
+    getDataFromDb = () => {
+        fetch('http://localhost:3001/api/getAuthorsData')
+            .then((data) => data.json())
+            .then((res) => this.setState({ dataAuthors: res.data }));
+    };
+
     render() {
+        const { dataAuthors } = this.state;
         return <div className={'authors'}>
             <div className={'mainWrapper'}>
                 <h1>{`Авторы`}</h1>
                 <hr/>
+                {dataAuthors.length <= 0
+                    ? 'Нет данных'
+                    : dataAuthors.map((dat) => (
+                        <AuthorShelf
+                            id={dat._id}
+                            name={dat.authorName}
+                            birthYear={dat.authorBirthYear}
+                            deathYear={dat.authorDeathYear}
+                            img={dat.authorImg}
+                            resume={dat.authorResume}
+                        />
+                    ))
+                }
             </div>
         </div>;
     }
