@@ -17,9 +17,9 @@ class Authors extends React.Component {
     }
 
     componentDidMount() {
-        this.getDataFromDb();
+        this.getDataFromDbAuthors();
         if (!this.state.intervalIsSet) {
-            let interval = setInterval(this.getDataFromDb, 1000);
+            let interval = setInterval(this.getDataFromDbAuthors, 1000);
             this.setState({ intervalIsSet: interval });
         }
     }
@@ -31,7 +31,7 @@ class Authors extends React.Component {
         }
     }
 
-    getDataFromDb = () => {
+    getDataFromDbAuthors = () => {
         fetch('http://localhost:3001/api/getAuthorsData')
             .then((data) => data.json())
             .then((res) => this.setState({ dataAuthors: res.data }));

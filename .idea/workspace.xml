@@ -2,30 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/getAuthorsData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/getGenresData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthorShelf/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthorShelf/style.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CollectionShelf/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CollectionShelf/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/getCollectionsData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/userModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/getBooksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/getBooksData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BookShelf/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/AuthorName/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Genres/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Genres/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/dbSetUp/booksConnect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/getBooks.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +147,8 @@
       <workItem from="1592457569576" duration="6000" />
       <workItem from="1592458374753" duration="14015000" />
       <workItem from="1592555346298" duration="6988000" />
-      <workItem from="1592622041726" duration="16263000" />
+      <workItem from="1592622041726" duration="16911000" />
+      <workItem from="1592721666096" duration="21361000" />
     </task>
     <servers />
   </component>
@@ -219,9 +211,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591884377076" />
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1592474901352">
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1592731618874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592474901352" />
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592731618874" />
   </component>
 </project>

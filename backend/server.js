@@ -6,6 +6,8 @@ const logger = require('morgan');
 const booksData = require('./getBooksData');
 const authorsData = require('./getAuthorsData');
 const genresData = require('./getGenresData');
+const collectionsData = require('./getCollectionsData');
+const UserData = require('./userModel');
 
 const API_PORT = 3001;
 const app = express();
@@ -19,9 +21,9 @@ mongoose.connect(dbRoute, { useNewUrlParser: true });
 
 let db = mongoose.connection;
 
-db.once('open', () => console.log('connected to the database'));
+db.once('open', () => console.log('подключение к БД успешно'));
 
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on('error', console.error.bind(console, 'Подключение к БД не удалось:'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -48,17 +50,24 @@ router.get('/getGenresData', (req, res) => {
     });
 });
 
-router.post('/updateAuthorsData', (req, res) => {
-    const { id, update } = req.body;
-    authorsData.findByIdAndUpdate(id, update, (err) => {
+router.get('/getCollectionsData', (req, res) => {
+    collectionsData.find((err, data) => {
+        if (err) return res.json({ success: false, error: err });
+        return res.json({ success: true, data: data });
+    });
+});
+
+router.post('/updateBooksData', (req, res) => {
+    const { _id, update } = req.body;
+    booksData.findByIdAndUpdate(_id, update, (err) => {
         if (err) return res.json({ success: false, error: err });
         return res.json({ success: true });
     });
 });
 
-router.delete('/deleteAuthorsData', (req, res) => {
-    const { id } = req.body;
-    authorsData.findByIdAndRemove(id, (err) => {
+router.delete('/deleteBooksData', (req, res) => {
+    const { _id } = req.body;
+    booksData.findByIdAndRemove(_id, (err) => {
         if (err) return res.send(err);
         return res.json({ success: true });
     });
@@ -67,17 +76,38 @@ router.delete('/deleteAuthorsData', (req, res) => {
 router.post('/putBooksData', (req, res) => {
     let data = new booksData();
 
-    const { id, bookRating, bookDescription } = req.body;
+    const { _id,
+        bookName,
+        bookPrice,
+        bookPublisher,
+        bookPubDate,
+        bookRating,
+        bookImg,
+        bookDescription
+    } = req.body;
 
-    if ((!id && id !== 0) || !bookRating || !bookDescription) {
+    if ((!_id && _id !== 0)
+        || !bookName
+        || !bookPrice
+        || !bookPublisher
+        || !bookPubDate
+        || !bookRating
+        || !bookImg
+        || !bookDescription ) {
+
         return res.json({
             success: false,
             error: 'INVALID INPUTS',
         });
     }
+    data.bookName = bookName;
+    data.bookPrice = bookPrice;
+    data.bookPublisher = bookPublisher;
+    data.bookPubDate = bookPubDate;
     data.bookRating = bookRating;
+    data.bookImg = bookImg;
     data.bookDescription = bookDescription;
-    data.id = id;
+    data._id = _id;
     data.save((err) => {
         if (err) return res.json({ success: false, error: err });
         return res.json({ success: true });
@@ -86,4 +116,4 @@ router.post('/putBooksData', (req, res) => {
 
 app.use('/api', router);
 
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen(API_PORT, () => console.log(`Прослушивается порт ${API_PORT}`));

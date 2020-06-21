@@ -11,36 +11,24 @@ class CatalogPage extends React.Component {
             dataBooks: [],
             dataAuthors: [],
             dataGenres: [],
+            dataCollections: [],
             intervalIsSet: false,
-            idToDelete: null,
-            idToUpdate: null,
-            objectToUpdate: null,
         };
     }
 
     componentDidMount() {
-        this.getDataFromDbBooks();
-        if (!this.state.intervalIsSet) {
-            let interval = setInterval(this.getDataFromDbBooks, 1000);
-            this.setState({ intervalIsSet: interval });
-        }
+        let datas = [
+            this.getDataFromDbBooks,
+            this.getDataFromDbAuthors,
+            this.getDataFromDbGenres,
+            this.getDataFromDbCollections
+        ];
 
-        this.getDataFromDbAuthors();
-        if (!this.state.intervalIsSet) {
-            let interval = setInterval(this.getDataFromDbAuthors, 1000);
-            this.setState({ intervalIsSet: interval });
-        }
-
-        this.getDataFromDbAuthors();
-        if (!this.state.intervalIsSet) {
-            let interval = setInterval(this.getDataFromDbAuthors, 1000);
-            this.setState({ intervalIsSet: interval });
-        }
-
-        this.getDataFromDbGenres();
-        if (!this.state.intervalIsSet) {
-            let interval = setInterval(this.getDataFromDbGenres, 1000);
-            this.setState({ intervalIsSet: interval });
+        for (let i = 0; i < datas.length; i++) {
+            if (!this.state.intervalIsSet) {
+                let interval = setInterval(datas[i](), 1000);
+                this.setState({intervalIsSet: interval});
+            }
         }
     }
 
@@ -69,9 +57,14 @@ class CatalogPage extends React.Component {
             .then((res) => this.setState({ dataGenres: res.data }));
     };
 
+    getDataFromDbCollections = () => {
+        fetch('http://localhost:3001/api/getCollectionsData')
+            .then((data) => data.json())
+            .then((res) => this.setState({ dataCollections: res.data }));
+    };
 
     render() {
-        const { dataBooks, dataAuthors, dataGenres } = this.state;
+        const { dataBooks, dataAuthors, dataGenres, dataCollections } = this.state;
 
         return <div className={'catalog'}>
             <div className={'mainWrapper'}>
@@ -86,6 +79,12 @@ class CatalogPage extends React.Component {
                             }
                         });
 
+                        const bookCollection = dataCollections.map((dataCollection) => {
+                            if (dataCollection.books_id.includes(dataBook._id)){
+                                return dataCollection.collectionName;
+                            }
+                        });
+
                         const bookGenre = (dataGenres.map((dataGenre) => {
                             if (dataGenre.books_id.includes(dataBook._id)){
                                 return dataGenre.genreName;
@@ -97,7 +96,7 @@ class CatalogPage extends React.Component {
                             price={dataBook.bookPrice}
                             genres={bookGenre}
                             author={bookAuthor}
-                            collection={dataBook.bookCollection}
+                            collection={bookCollection}
                             publisher={dataBook.bookPublisher}
                             date={dataBook.bookPubDate}
                             rank={dataBook.bookRating}

@@ -35,12 +35,12 @@ const BookShelf = (props) => {
         </div>
         <div className={'bookShelfRight'}>
             <h3>{name}</h3>
-            <a href={'/author'}>{author}</a>
+            <a href={`/catalog/authors/${author}`}>{author}</a>
             <div className={'bookShelfButtons'}>
-                <a href={'/'}>
+                <a href={`/profile/basket${name}`}>
                     <button>В корзину</button>
                 </a>
-                <a href={'/'}>
+                <a href={`/catalog/books/book${name}`}>
                     <button>Подробнее</button>
                 </a>
             </div>
@@ -54,7 +54,7 @@ const BookShelf = (props) => {
                             return (
                                 <div>
                                     <a href={'/'}>{genre[0]}</a>
-                                    <a href={'/'}>{genre[1]}</a>
+                                    <a href={`/catalog/genres/${genre[1]}`}>{genre[1]}</a>
                                 </div>
                             )
                         }
@@ -72,7 +72,7 @@ const BookShelf = (props) => {
                 </div>
                 <div>
                     <strong>Коллекция:</strong>
-                    <a href={'/'}>{collection}</a>
+                    <a href={`/catalog/collections/${collection}`}>{collection}</a>
                 </div>
             </div>
             <p>

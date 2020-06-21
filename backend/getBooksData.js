@@ -6,8 +6,6 @@ const DataSchema = new Schema(
         _id: String,
         bookName: String,
         bookPrice: Number,
-        bookGenre: Array,
-        bookCollection: String,
         bookPublisher: String,
         bookPubDate: Number,
         bookRating: Number,

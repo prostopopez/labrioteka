@@ -5,48 +5,30 @@ import styleMain from '../../style/main.css';
 
 const cn = classnames.bind(style, styleMain);
 
-const AuthorShelf = (props) => {
+const GenreShelf = (props) => {
     const {
         id,
-        img,
-        name,
-        birthYear,
-        deathYear,
-        resume
+        mainGenre,
+        miniGenre,
+        description
     } = props;
 
-    const isOverLength = resume.length >= 200;
+    const isOverLength = description.length >= 200;
 
-    return <div className={'bookShelf'}>
+    return <div className={cn('bookShelf', 'genreShelf')}>
         <div className={cn('bookShelfLeft', 'authorImg')}>
-            <img
-                src={img}
-                alt=""/>
+
         </div>
         <div className={'bookShelfRight'}>
-            <h3>{name}</h3>
+            <h3>{mainGenre}</h3>
             <div className={'bookShelfButtons'}>
-                <a href={`/catalog/authors/${id}`}>
-                    <button>Подробнее</button>
-                </a>
+                {miniGenre}
             </div>
             <div className={'bookShelfInfo'}>
-                <div>
-                    <strong>Год рождения:</strong>
-                    <span>{birthYear}</span>
-                    <br/>
-                    <strong>Год смерти:</strong>
-                    <span>{deathYear}</span>
-                </div>
+
             </div>
-            <p>
-                {isOverLength
-                    ? `${resume.substring(0, 200)}...`
-                    : resume
-                }
-            </p>
         </div>
     </div>;
 };
 
-export default AuthorShelf;
+export default GenreShelf;
