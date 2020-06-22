@@ -11,6 +11,7 @@ import Collections from './pages/Catalog/Collections';
 import CollectionName from './pages/Catalog/Collections/CollectionName';
 import DeliveryPage from './pages/Delivery';
 import ContactPage from './pages/Contacts';
+import AdminPage from './pages/AdminPage';
 
 const routes = [
     {
@@ -36,6 +37,12 @@ const routes = [
         exact: true,
         title: ``,
         component: ContactPage
+    },
+    {
+        path: `/admin`,
+        exact: true,
+        title: ``,
+        component: AdminPage
     },
     {
         path: `/catalog/book:id`,

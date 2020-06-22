@@ -316,4 +316,77 @@
     display: none;
   }
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 20%;
+  left: 35%;
+  width: 30vw;
+  height: 30vw;
+  background-color: hsl(20, 100%, 99%);
+  border: 1px solid hsl(0, 0%, 13%);
+  box-shadow: 0.5vw 0.5vw 2vw hsl(0, 0%, 13%);
+}
+.modal .log-in {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal .reg-in {
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.modal form {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.modal input,
+.modal .green {
+  margin-right: 1vw;
+  padding: 1vw;
+  border: none;
+  border-radius: 5px;
+  font-size: 1vw;
+}
+.modal button {
+  margin-right: 1vw;
+  padding: 1vw;
+  border: none;
+  border-radius: 5px;
+  font-size: 1vw;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+.modal button.green {
+  background: limegreen;
+}
+.modal button.purple {
+  width: 80%;
+  background: palevioletred;
+}
+.modal button:hover {
+  background: hsl(240, 33%, 17%);
+  transition: all 0.4s ease 0s;
+}
+.modal.isModalOpen {
+  display: block;
+}
+.modal.isToggleReg .log-in {
+  display: none;
+}
+.modal.isToggleReg .reg-in {
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */

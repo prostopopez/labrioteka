@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const DataSchema = new Schema(
     {
-        _id: String,
+        _id: mongoose.Schema.Types.ObjectId,
         authorName: String,
         authorBirthYear: Number,
         authorDeathYear: Number,

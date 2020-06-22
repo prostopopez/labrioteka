@@ -25,6 +25,8 @@ class CatalogPage extends React.Component {
         ];
 
         for (let i = 0; i < datas.length; i++) {
+            datas[i]();
+
             if (!this.state.intervalIsSet) {
                 let interval = setInterval(datas[i](), 1000);
                 this.setState({intervalIsSet: interval});

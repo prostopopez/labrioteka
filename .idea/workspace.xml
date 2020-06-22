@@ -2,21 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b88db5-44eb-414c-8c79-b7df25e2b8d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/getCollectionsData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/userModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminPage/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminPage/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminPage/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/getAuthorsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/getAuthorsData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/getBooksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/getBooksData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/getCollectionsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/getCollectionsData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/getGenresData.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/getGenresData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookShelf/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookShelf/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenreShelf/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreShelf/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Authors/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Genres/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Genres/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Catalog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dbSetUp/booksConnect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/getBooks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/CollectionShelf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/AdminPage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,19 +66,19 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\CollectionShelf" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\AuthorShelf" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\bookShelf" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\services" />
-      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\TelephoneInput" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\services\dbSetUp" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\services" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src\services\dbSetUp\models" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\src" />
       <recent name="D:\Files\Learning\Diplom\labrioteka\server" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\pages\AdminPage" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\CollectionShelf" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\AuthorShelf" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\components\bookShelf" />
+      <recent name="D:\Files\Learning\Diplom\labrioteka\src\services" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start client">
@@ -148,7 +155,7 @@
       <workItem from="1592458374753" duration="14015000" />
       <workItem from="1592555346298" duration="6988000" />
       <workItem from="1592622041726" duration="16911000" />
-      <workItem from="1592721666096" duration="21361000" />
+      <workItem from="1592721666096" duration="44426000" />
     </task>
     <servers />
   </component>
@@ -167,10 +174,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="177" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1591530468365" />
-    <state x="828" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591887648301">
+    <state x="828" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592760121810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="828" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591887648301" />
+    <state x="828" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592760121810" />
     <state x="1170" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591366639929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -211,9 +218,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1249" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591884377076" />
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1592731618874">
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup" timestamp="1592784693609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592731618874" />
+    <state x="1096" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592784693609" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592783878290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592783878290" />
   </component>
 </project>

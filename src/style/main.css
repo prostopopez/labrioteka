@@ -138,7 +138,8 @@ a,
 .authors,
 .aboutAuthor,
 .aboutBook,
-.bookReviews {
+.bookReviews,
+.admin {
   padding: 4% 0;
   text-align: center;
 }
@@ -152,7 +153,8 @@ a,
 .authors h1,
 .aboutAuthor h1,
 .aboutBook h1,
-.bookReviews h1 {
+.bookReviews h1,
+.admin h1 {
   font-size: 3vw;
   text-transform: uppercase;
   margin: 0;
@@ -168,7 +170,8 @@ a,
   .authors h1,
   .aboutAuthor h1,
   .aboutBook h1,
-  .bookReviews h1 {
+  .bookReviews h1,
+  .admin h1 {
     margin-top: 20vw;
     font-size: 8vw;
   }
@@ -183,7 +186,8 @@ a,
 .authors h2,
 .aboutAuthor h2,
 .aboutBook h2,
-.bookReviews h2 {
+.bookReviews h2,
+.admin h2 {
   font-size: 2vw;
 }
 .contacts h3,
@@ -196,7 +200,8 @@ a,
 .authors h3,
 .aboutAuthor h3,
 .aboutBook h3,
-.bookReviews h3 {
+.bookReviews h3,
+.admin h3 {
   font-size: 2vw;
 }
 @media (max-width: 414px) {
@@ -210,7 +215,8 @@ a,
   .authors h3,
   .aboutAuthor h3,
   .aboutBook h3,
-  .bookReviews h3 {
+  .bookReviews h3,
+  .admin h3 {
     margin-top: 20vw;
     font-size: 6vw;
   }
@@ -225,7 +231,8 @@ a,
 .authors hr,
 .aboutAuthor hr,
 .aboutBook hr,
-.bookReviews hr {
+.bookReviews hr,
+.admin hr {
   margin-top: 0;
   width: 100%;
 }

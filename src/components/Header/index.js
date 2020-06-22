@@ -1,9 +1,11 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import enhanceWithClickOutside from 'react-click-outside';
+import axios from 'axios';
 import { ReactSVG } from 'react-svg'
 import style from './style.css';
 import styleMain from '../../style/main.css';
+import isCurrency from "validator/es/lib/isCurrency";
 
 const cn = classnames.bind(style, styleMain);
 
@@ -18,10 +20,53 @@ class Header extends React.Component {
         super();
 
         this.state = {
+            dataUsers: [],
+            id: 0,
+            username: null,
+            password: null,
             isMenuOpen: false,
-            isSubmenuOpen: false
+            isSubmenuOpen: false,
+            isModalOpen: false,
+            isToggleReg: false,
+            intervalIsSet: false,
         };
     }
+
+    componentDidMount() {
+        this.getDataFromDbUsers();
+
+        if (!this.state.intervalIsSet) {
+            let interval = setInterval(this.getDataFromDbUsers(), 1000);
+            this.setState({intervalIsSet: interval});
+        }
+    }
+
+    componentWillUnmount() {
+        if (this.state.intervalIsSet) {
+            clearInterval(this.state.intervalIsSet);
+            this.setState({ intervalIsSet: null });
+        }
+    }
+
+    getDataFromDbUsers = () => {
+        fetch('http://localhost:3001/api/getUserData')
+            .then((data) => data.json())
+            .then((res) => this.setState({ dataUsers: res.data }));
+    };
+
+    putDataToDbUsers = (username, password) => {
+        let currentIds = this.state.dataUsers.map((data) => data.id);
+        let idToBeAdded = 0;
+        while (currentIds.includes(idToBeAdded)) {
+            ++idToBeAdded;
+        }
+
+        axios.post('http://localhost:3001/api/putUserData', {
+            id: idToBeAdded,
+            username: username,
+            password: password
+        });
+    };
 
     toggleMenu = (isMenuOpen) => {
         this.setState({
@@ -42,7 +87,10 @@ class Header extends React.Component {
     };
 
     handleClickOutside() {
-        this.setState({ isSubmenuOpen: false });
+        this.setState({
+            isSubmenuOpen: false,
+            isModalOpen: false
+        });
     }
 
     goTo = (e, link) => {
@@ -54,12 +102,70 @@ class Header extends React.Component {
         document.body.classList.remove('noScroll');
     };
 
+    toggleModal = () => {
+        this.setState(
+            prevState => ({
+                isModalOpen: !prevState.isModalOpen
+            })
+        );
+    };
+
+    toggleReg = (isToggleReg) => {
+        this.setState ({
+            isToggleReg
+        })
+    };
+
+    checkUser = (e, username, password) => {
+        const { dataUsers } = this.state;
+
+        const isUserCorrect = dataUsers.map( singleData => {
+            if(singleData.username == username && singleData.password == password) {
+                return [true, singleData.username];
+            }
+        });
+
+        if(isUserCorrect[0]) {
+            this.goTo(e, `/${isUserCorrect[1]}`);
+        } else {
+            alert('Вы ввели что-то неправильно');
+        }
+    };
+
     render() {
-        const { menuItems, pathname } = this.props;
-        const { isMenuOpen, isSubmenuOpen } = this.state;
+        const {
+            menuItems,
+            pathname
+        } = this.props;
+        const {
+            isMenuOpen,
+            isSubmenuOpen,
+            isModalOpen,
+            isToggleReg
+        } = this.state;
         const isMainPage = pathname === `/`;
 
         return <header className={cn(`header`, { isMainPage, expanded: isMenuOpen, isSubmenuOpen })}>
+            <div
+                className={cn(`modal`, { isModalOpen, isToggleReg })}
+            >
+                <div className={'log-in'}>
+                    <form>
+                        <input type={'text'} onChange={(e) => this.setState({ username: e.target.value })} placeholder={'Введите ваш логин'} required={true}/>
+                        <input type={'password'} onChange={(e) => this.setState({ password: e.target.value })} placeholder={'Введите ваш пароль'} required={true}/>
+                        <button onClick={(e) => this.checkUser(e, this.state.username, this.state.password)} className={'green'}>Войти</button>
+                    </form>
+                    <button onClick={() => {this.toggleReg(true);}} className={'purple'}>Создать пользователя</button>
+                </div>
+                <div className='reg-in'>
+                    <form>
+                        <input type={'text'} onChange={(e) => this.setState({ username: e.target.value })} placeholder={'Введите новый логин'} required={true}/>
+                        <input type={'password'} onChange={(e) => this.setState({ password: e.target.value })} placeholder={'Введите новый пароль'} required={true}/>
+                        <button onClick={() => this.putDataToDbUsers(this.state.username, this.state.password)} className={'green'}>Зарегистрироваться</button>
+                    </form>
+                    <button onClick={() => this.toggleReg(false)} className={'purple'}>Вернуться к авторизации</button>
+                </div>
+            </div>
             <div className={'headerWrapper'}>
                 <div className={'mainWrapper'}>
                     {isMainPage
@@ -150,12 +256,12 @@ class Header extends React.Component {
                                     }}
                                 />
                             </a>
-                            <a
-                                onClick={(e) => {this.goTo(e, `/profile`); this.toggleSubmenu(false)}}
+                            <div
+                                onClick={() => this.toggleModal()}
+                                // onClick={(e) => {this.goTo(e, `/profile`); this.toggleSubmenu(false)}}
                                 className={cn('headfootLink', {
                                     isCurrentPage: pathname === '/profile'
                                 })}
-                                href="/profile"
                             >
                                 <ReactSVG
                                     src="../img/userIcon.svg"
@@ -163,7 +269,7 @@ class Header extends React.Component {
                                         svg.classList.add('menuIcon')
                                     }}
                                 />
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
