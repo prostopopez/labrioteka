@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import enhanceWithClickOutside from 'react-click-outside';
 import axios from 'axios';
-import { ReactSVG } from 'react-svg'
+import {ReactSVG} from 'react-svg'
 import style from './style.css';
 import styleMain from '../../style/main.css';
 import isCurrency from "validator/es/lib/isCurrency";
@@ -25,7 +25,6 @@ class Header extends React.Component {
             username: null,
             password: null,
             isMenuOpen: false,
-            isSubmenuOpen: false,
             isModalOpen: false,
             isToggleReg: false,
             intervalIsSet: false,
@@ -44,14 +43,14 @@ class Header extends React.Component {
     componentWillUnmount() {
         if (this.state.intervalIsSet) {
             clearInterval(this.state.intervalIsSet);
-            this.setState({ intervalIsSet: null });
+            this.setState({intervalIsSet: null});
         }
     }
 
     getDataFromDbUsers = () => {
         fetch('http://localhost:3001/api/getUserData')
             .then((data) => data.json())
-            .then((res) => this.setState({ dataUsers: res.data }));
+            .then((res) => this.setState({dataUsers: res.data}));
     };
 
     putDataToDbUsers = (username, password) => {
@@ -80,15 +79,8 @@ class Header extends React.Component {
         }
     };
 
-    toggleSubmenu = (isSubmenuOpen) => {
-        this.setState({
-            isSubmenuOpen
-        });
-    };
-
     handleClickOutside() {
         this.setState({
-            isSubmenuOpen: false,
             isModalOpen: false
         });
     }
@@ -111,21 +103,21 @@ class Header extends React.Component {
     };
 
     toggleReg = (isToggleReg) => {
-        this.setState ({
+        this.setState({
             isToggleReg
         })
     };
 
     checkUser = (e, username, password) => {
-        const { dataUsers } = this.state;
+        const {dataUsers} = this.state;
 
-        const isUserCorrect = dataUsers.map( singleData => {
-            if(singleData.username == username && singleData.password == password) {
+        const isUserCorrect = dataUsers.map(singleData => {
+            if (singleData.username == username && singleData.password == password) {
                 return [true, singleData.username];
             }
         });
 
-        if(isUserCorrect[0]) {
+        if (isUserCorrect[0]) {
             this.goTo(e, `/${isUserCorrect[1]}`);
         } else {
             alert('Вы ввели что-то неправильно');
@@ -139,29 +131,39 @@ class Header extends React.Component {
         } = this.props;
         const {
             isMenuOpen,
-            isSubmenuOpen,
             isModalOpen,
             isToggleReg
         } = this.state;
         const isMainPage = pathname === `/`;
 
-        return <header className={cn(`header`, { isMainPage, expanded: isMenuOpen, isSubmenuOpen })}>
+        return <header className={cn(`header`, {isMainPage, expanded: isMenuOpen})}>
             <div
-                className={cn(`modal`, { isModalOpen, isToggleReg })}
+                className={cn(`modal`, {isModalOpen, isToggleReg})}
             >
                 <div className={'log-in'}>
                     <form>
-                        <input type={'text'} onChange={(e) => this.setState({ username: e.target.value })} placeholder={'Введите ваш логин'} required={true}/>
-                        <input type={'password'} onChange={(e) => this.setState({ password: e.target.value })} placeholder={'Введите ваш пароль'} required={true}/>
-                        <button onClick={(e) => this.checkUser(e, this.state.username, this.state.password)} className={'green'}>Войти</button>
+                        <input type={'text'} onChange={(e) => this.setState({username: e.target.value})}
+                               placeholder={'Введите ваш логин'} required={true}/>
+                        <input type={'password'} onChange={(e) => this.setState({password: e.target.value})}
+                               placeholder={'Введите ваш пароль'} required={true}/>
+                        <button onClick={(e) => this.checkUser(e, this.state.username, this.state.password)}
+                                className={'green'}>Войти
+                        </button>
                     </form>
-                    <button onClick={() => {this.toggleReg(true);}} className={'purple'}>Создать пользователя</button>
+                    <button onClick={() => {
+                        this.toggleReg(true);
+                    }} className={'purple'}>Создать пользователя
+                    </button>
                 </div>
                 <div className='reg-in'>
                     <form>
-                        <input type={'text'} onChange={(e) => this.setState({ username: e.target.value })} placeholder={'Введите новый логин'} required={true}/>
-                        <input type={'password'} onChange={(e) => this.setState({ password: e.target.value })} placeholder={'Введите новый пароль'} required={true}/>
-                        <button onClick={() => this.putDataToDbUsers(this.state.username, this.state.password)} className={'green'}>Зарегистрироваться</button>
+                        <input type={'text'} onChange={(e) => this.setState({username: e.target.value})}
+                               placeholder={'Введите новый логин'} required={true}/>
+                        <input type={'password'} onChange={(e) => this.setState({password: e.target.value})}
+                               placeholder={'Введите новый пароль'} required={true}/>
+                        <button onClick={() => this.putDataToDbUsers(this.state.username, this.state.password)}
+                                className={'green'}>Зарегистрироваться
+                        </button>
                     </form>
                     <button onClick={() => this.toggleReg(false)} className={'purple'}>Вернуться к авторизации</button>
                 </div>
@@ -170,7 +172,7 @@ class Header extends React.Component {
                 <div className={'mainWrapper'}>
                     {isMainPage
                         ? <div className={'headerDescription'}>
-                                <div className={'h1Wrapper'}>
+                            <div className={'h1Wrapper'}>
                                 <ReactSVG
                                     src="../img/bookIcon.svg"
                                     beforeInjection={(svg) => {
@@ -186,10 +188,11 @@ class Header extends React.Component {
                 </div>
                 <div className={'mainWrapper'}>
                     <div className={'headerContentWrapper'}>
-                        <button className={cn(`toggle`, { active: isMenuOpen })} onClick={() => this.toggleMenu(!isMenuOpen)}>
-                            <span />
-                            <span />
-                            <span />
+                        <button className={cn(`toggle`, {active: isMenuOpen})}
+                                onClick={() => this.toggleMenu(!isMenuOpen)}>
+                            <span/>
+                            <span/>
+                            <span/>
                         </button>
                         <div className={'left'}>
                             <menu>
@@ -199,7 +202,9 @@ class Header extends React.Component {
                                         <a
                                             className={cn('headfootLink', 'notMainPage')}
                                             href="/"
-                                            onClick={(e) => {this.goTo(e, `/`); this.toggleSubmenu(false)}}
+                                            onClick={(e) => {
+                                                this.goTo(e, `/`);
+                                            }}
                                         >
                                             {isMenuOpen
                                                 ? 'Главная'
@@ -215,8 +220,9 @@ class Header extends React.Component {
                                 }
                                 {menuItems.map(item => <li className={'forMenuList'}>
                                     <a
-                                        onClick={(e) => {this.goTo(e, item.link); this.toggleSubmenu(false)}}
-                                        onMouseOver={() => this.toggleSubmenu(true)}
+                                        onClick={(e) => {
+                                            this.goTo(e, item.link);
+                                        }}
                                         className={cn('headfootLink', {
                                             notMainPage: !isMainPage,
                                             isCurrentPage: (item.link !== '/catalog' && pathname.includes(item.link)) || (pathname === '/catalog' && item.link === '/catalog')
@@ -225,25 +231,14 @@ class Header extends React.Component {
                                     >
                                         {item.name}
                                     </a>
-                                    <ul className="headerSubmenu">
-                                        {menuItems.map(item => <li>
-                                            <a
-                                                onClick={(e) => {this.goTo(e, item.link); this.toggleSubmenu(false)}}
-                                                className={cn('headfootLink', {
-                                                    notMainPage: !isMainPage
-                                                })}
-                                                href={item.link}
-                                            >
-                                                {item.name}
-                                            </a>
-                                        </li>)}
-                                    </ul>
                                 </li>)}
                             </menu>
                         </div>
-                        <div className={cn(`userToggle`, { active: isMainPage })}>
+                        <div className={cn(`userToggle`, {active: isMainPage})}>
                             <a
-                                onClick={(e) => {this.goTo(e, `/profile/basket`); this.toggleSubmenu(false)}}
+                                onClick={(e) => {
+                                    this.goTo(e, `/profile/basket`);
+                                }}
                                 className={cn('headfootLink', {
                                     isCurrentPage: pathname === '/profile/basket'
                                 })}
@@ -258,7 +253,6 @@ class Header extends React.Component {
                             </a>
                             <div
                                 onClick={() => this.toggleModal()}
-                                // onClick={(e) => {this.goTo(e, `/profile`); this.toggleSubmenu(false)}}
                                 className={cn('headfootLink', {
                                     isCurrentPage: pathname === '/profile'
                                 })}
