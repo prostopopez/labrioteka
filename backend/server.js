@@ -16,7 +16,7 @@ app.use(cors());
 const router = express.Router();
 
 const dbRoute =
-    'mongodb+srv://prostopopez:prostopopez@cluster0-qljpi.mongodb.net/labrioteka?retryWrites=true&w=majority';
+    'mongodb+srv://prostopopez:prostopopez@cluster0.qljpi.mongodb.net/labrioteka?retryWrites=true&w=majority';
 
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 

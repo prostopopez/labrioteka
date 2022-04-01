@@ -2,7 +2,7 @@ let store = null;
 
 const getCoordData = async () => {
     if (store === null) {
-        store = fetch('https://api.ipregistry.co/?key=22u1lyn8beqgz0&pretty=true').then(data => data.json());
+        store = fetch('https://api.ipregistry.co/?key=40b6wipy90r0inp0&pretty=true').then(data => data.json());
     }
 
     return store;
